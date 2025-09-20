@@ -1,0 +1,225 @@
+(footprint "Linear Hall Effect Sensor SS49E"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 3.81 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "66fac953-e118-4744-8f06-f2432f17db37")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "Linear Hall Effect Sensor SS49E"
+		(at 0 5.08 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "a2b2fef3-39c0-4f83-98aa-7310cbe3c459")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "229bd24b-5b38-433e-a9ce-09625849ce93")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e0fc33e4-5a35-475e-9d01-997037d2bca4")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_line
+		(start -2 -3.8)
+		(end -2 -1)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "74003c17-a824-481f-906f-09e0ea0236cb")
+	)
+	(fp_line
+		(start -1.3 -3.4)
+		(end -2 -3.8)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "6d65256d-bf3e-445d-b850-239437603260")
+	)
+	(fp_line
+		(start -1.3 -3.4)
+		(end -1.3 -0.8)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "abd81aec-e5e4-41d3-bc5f-4a0eb35f1e50")
+	)
+	(fp_line
+		(start -1.3 -3.4)
+		(end 1.3 -3.4)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "c1b25e35-5904-49c7-be75-91591bd4906a")
+	)
+	(fp_line
+		(start 1.3 -3.4)
+		(end 1.3 -0.8)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "8312baf3-5f28-4754-a0e3-8be57e1499be")
+	)
+	(fp_line
+		(start 2 -3.81)
+		(end -2 -3.81)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "caa8ef80-0d5f-4676-989d-fff7abdcc5bf")
+	)
+	(fp_line
+		(start 2 -3.81)
+		(end 1.3 -3.4)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "ccceb8ef-b1d8-402f-b1b3-beed349d444f")
+	)
+	(fp_line
+		(start 2 -1)
+		(end 2 -3.81)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "a7c4efad-b567-473e-bbb5-34a2a24685bd")
+	)
+	(fp_line
+		(start -2 -3.81)
+		(end -2 -0.5)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "87724561-3f3f-4c30-a5bb-d16b05618688")
+	)
+	(fp_line
+		(start -2 -0.5)
+		(end 2 -0.5)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "bfb9d67c-cdb5-40bb-aa90-49337cf52d6d")
+	)
+	(fp_line
+		(start 2 -3.81)
+		(end -2 -3.81)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "93a157f7-b862-49b2-ab3a-be8d3127bccb")
+	)
+	(fp_line
+		(start 2 -0.5)
+		(end 2 -3.81)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "04a9a2fd-b919-4043-86e2-2554911b0fe1")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 6.35 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "ea0f9a37-f943-46ac-95fc-0bafd8b0cf92")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" thru_hole circle
+		(at -1.905 0)
+		(size 1.5 1.5)
+		(drill 0.8)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "beaab010-62c5-43d0-b8e4-bc63ac7343d3")
+	)
+	(pad "2" thru_hole circle
+		(at 0 0)
+		(size 1.5 1.5)
+		(drill 0.8)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "c2096a7e-b2ae-4af9-b7ee-f7ebf1b696dc")
+	)
+	(pad "3" thru_hole circle
+		(at 1.905 0)
+		(size 1.5 1.5)
+		(drill 0.8)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "86bb7ac2-cf8a-4e6d-b72b-a9877c90a73e")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/SS49E 90 degree bend.step"
+		(offset
+			(xyz -2 0.7 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -0 -0 -0)
+		)
+	)
+)

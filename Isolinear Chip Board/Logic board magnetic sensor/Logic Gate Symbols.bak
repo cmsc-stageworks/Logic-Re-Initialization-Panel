@@ -1,0 +1,122 @@
+(kicad_symbol_lib
+	(version 20241209)
+	(generator "kicad_symbol_editor")
+	(generator_version "9.0")
+	(symbol "Linear_Hall_Effect_Sensor"
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "U"
+			(at -5.842 -0.508 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://uc91381c3f3129ba0fabff32497f.dl.dropboxusercontent.com/cd/0/inline2/Crkrt_J2gHvRIbNUkCCbrtviP03OYfy4hp6psAkjwI3ArpseT23NXvglgOoEGZsEzH91FuRDR7x_WUHC8IvfPOmqYlsIbF3VOsEMD4OB0wtLfV1F7Z-lUu8kXxdE4K6nT9B3j1FziYycLO8p3hnAFl5IpohnpRiInt945i-hl2UYBh_s7oENjeaKQ96_NJcrk2h7IVNQhXAlL3Pyt89lrlaBVRJh0pi2Xq1SOyxR0W9gfvvoVGF2LUlwEm34AgMHAUa0OTBB7NEouQbOfvYg-_M700AHgt3U13Jfahqq_kweS55q7CP_MQi5__Ie4yVHYNAqLx693DVcoYDF7EZLd9gO6MryuryBLPviIH80ee948A/file"
+			(at 0 -10.414 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "SS49E Linear Hall-Effect Sensor"
+			(at 0.254 3.556 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "Linear_Hall_Effect_Sensor_0_1"
+			(rectangle
+				(start 3.81 -2.54)
+				(end -3.81 2.54)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "Linear_Hall_Effect_Sensor_1_1"
+			(pin input line
+				(at -2.54 -5.08 90)
+				(length 2.54)
+				(name "VDD"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at 0 -5.08 90)
+				(length 2.54)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at 2.54 -5.08 90)
+				(length 2.54)
+				(name "OUT"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+)

@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "Connectors_JST.pretty-master")(type "KiCad")(uri "${KIPRJMOD}/Connectors_JST.pretty-master")(options "")(descr "JST Connectors (Needed for switches)"))
+)

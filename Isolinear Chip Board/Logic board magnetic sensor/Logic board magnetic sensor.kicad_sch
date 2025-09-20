@@ -1,0 +1,4891 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "0412001e-ce1e-4114-8b47-96e686d3050a")
+	(paper "A4")
+	(lib_symbols
+		(symbol "Connector_Generic:Conn_02x07_Odd_Even"
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at 1.27 10.16 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Conn_02x07_Odd_Even"
+				(at 1.27 -10.16 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Generic connector, double row, 02x07, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "connector"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Connector*:*_2x??_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Conn_02x07_Odd_Even_1_1"
+				(rectangle
+					(start -1.27 8.89)
+					(end 3.81 -8.89)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(rectangle
+					(start -1.27 7.747)
+					(end 0 7.493)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 5.207)
+					(end 0 4.953)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 2.667)
+					(end 0 2.413)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 0.127)
+					(end 0 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -2.413)
+					(end 0 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -4.953)
+					(end 0 -5.207)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -7.493)
+					(end 0 -7.747)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 3.81 7.747)
+					(end 2.54 7.493)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 3.81 5.207)
+					(end 2.54 4.953)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 3.81 2.667)
+					(end 2.54 2.413)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 3.81 0.127)
+					(end 2.54 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 3.81 -2.413)
+					(end 2.54 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 3.81 -4.953)
+					(end 2.54 -5.207)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 3.81 -7.493)
+					(end 2.54 -7.747)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 7.62 0)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 5.08 0)
+					(length 3.81)
+					(name "Pin_3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 2.54 0)
+					(length 3.81)
+					(name "Pin_5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name "Pin_7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -2.54 0)
+					(length 3.81)
+					(name "Pin_9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -5.08 0)
+					(length 3.81)
+					(name "Pin_11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -7.62 0)
+					(length 3.81)
+					(name "Pin_13"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "13"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 7.62 180)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 5.08 180)
+					(length 3.81)
+					(name "Pin_4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 2.54 180)
+					(length 3.81)
+					(name "Pin_6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 0 180)
+					(length 3.81)
+					(name "Pin_8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 -2.54 180)
+					(length 3.81)
+					(name "Pin_10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 -5.08 180)
+					(length 3.81)
+					(name "Pin_12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 -7.62 180)
+					(length 3.81)
+					(name "Pin_14"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "14"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Logic Gate Symbols:Linear_Hall_Effect_Sensor"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at -5.842 -0.508 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Logic Board Footprints:Linear Hall Effect Sensor SS49E"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://uc91381c3f3129ba0fabff32497f.dl.dropboxusercontent.com/cd/0/inline2/Crkrt_J2gHvRIbNUkCCbrtviP03OYfy4hp6psAkjwI3ArpseT23NXvglgOoEGZsEzH91FuRDR7x_WUHC8IvfPOmqYlsIbF3VOsEMD4OB0wtLfV1F7Z-lUu8kXxdE4K6nT9B3j1FziYycLO8p3hnAFl5IpohnpRiInt945i-hl2UYBh_s7oENjeaKQ96_NJcrk2h7IVNQhXAlL3Pyt89lrlaBVRJh0pi2Xq1SOyxR0W9gfvvoVGF2LUlwEm34AgMHAUa0OTBB7NEouQbOfvYg-_M700AHgt3U13Jfahqq_kweS55q7CP_MQi5__Ie4yVHYNAqLx693DVcoYDF7EZLd9gO6MryuryBLPviIH80ee948A/file"
+				(at 0 -10.414 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "SS49E Linear Hall-Effect Sensor"
+				(at 0.254 3.556 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Linear_Hall_Effect_Sensor_0_1"
+				(rectangle
+					(start 3.81 -2.54)
+					(end -3.81 2.54)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Linear_Hall_Effect_Sensor_1_1"
+				(pin input line
+					(at -2.54 -5.08 90)
+					(length 2.54)
+					(name "VDD"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 0 -5.08 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 2.54 -5.08 90)
+					(length 2.54)
+					(name "OUT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Mechanical:MountingHole"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom no)
+			(on_board yes)
+			(property "Reference" "H"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "MountingHole"
+				(at 0 3.175 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Mounting Hole without connection"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "mounting hole"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "MountingHole*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "MountingHole_0_1"
+				(circle
+					(center 0 0)
+					(radius 1.27)
+					(stroke
+						(width 1.27)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "power:GND"
+			(power)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "GND_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "power:VCC"
+			(power)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "VCC"
+				(at 0 3.556 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"VCC\""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "VCC_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "VCC_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(wire
+		(pts
+			(xy 92.71 107.95) (xy 97.79 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "01acd245-4d5d-4df9-bb37-e20878c2403d")
+	)
+	(wire
+		(pts
+			(xy 176.53 137.16) (xy 181.61 137.16)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "02b113be-750a-488f-8f54-88cbbaacbfda")
+	)
+	(wire
+		(pts
+			(xy 157.48 130.81) (xy 130.81 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "02cd1cc7-680c-4e64-835c-db1bbdac5741")
+	)
+	(wire
+		(pts
+			(xy 105.41 83.82) (xy 133.35 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "069d0cc9-162b-4a12-9136-87720318a745")
+	)
+	(wire
+		(pts
+			(xy 132.08 54.61) (xy 132.08 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "06b3f128-90a8-432e-a9ed-5f1c9e6e2b01")
+	)
+	(wire
+		(pts
+			(xy 179.07 116.84) (xy 179.07 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "07f9caa2-cb7d-4dd5-b3f0-f7fa29ab1254")
+	)
+	(wire
+		(pts
+			(xy 157.48 130.81) (xy 157.48 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0a6db4dc-aae2-4f87-b0e6-7ea23f8cdc69")
+	)
+	(wire
+		(pts
+			(xy 93.98 88.9) (xy 93.98 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0ccfdcce-f1cc-479e-92fb-21ecaf7301d0")
+	)
+	(wire
+		(pts
+			(xy 181.61 137.16) (xy 181.61 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0db1ac8e-fff6-4496-b380-653bdccd1488")
+	)
+	(wire
+		(pts
+			(xy 88.9 130.81) (xy 115.57 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0dfcbfa8-8d60-4212-aae3-af3bcb65c114")
+	)
+	(wire
+		(pts
+			(xy 132.08 25.4) (xy 132.08 29.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0e2a5b22-4963-4c73-b71f-5ff1bce724a1")
+	)
+	(wire
+		(pts
+			(xy 134.62 139.7) (xy 134.62 137.16)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0fa43beb-e9a4-41e1-82ec-b252955a31de")
+	)
+	(wire
+		(pts
+			(xy 181.61 107.95) (xy 181.61 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0ff7d5e4-d525-4f5a-ba87-fe7a75a36bd7")
+	)
+	(wire
+		(pts
+			(xy 120.65 116.84) (xy 120.65 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "101892b5-820c-443e-ad5e-60fa1aab80ff")
+	)
+	(wire
+		(pts
+			(xy 179.07 29.21) (xy 179.07 26.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "118a86f1-3811-4d3f-b986-e8b9ce9eaffa")
+	)
+	(wire
+		(pts
+			(xy 139.7 59.69) (xy 139.7 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "137ee9b9-6643-40fa-aa52-6abfb46e5a4b")
+	)
+	(wire
+		(pts
+			(xy 163.83 76.2) (xy 146.05 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "16d521dc-7ae4-440a-9a6c-b53da8d8ed8c")
+	)
+	(wire
+		(pts
+			(xy 134.62 107.95) (xy 139.7 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "22519236-51f5-432f-b455-ce1768dc5527")
+	)
+	(wire
+		(pts
+			(xy 173.99 54.61) (xy 173.99 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "24fe5cc7-6bfb-4fb3-a812-6430d20e59fe")
+	)
+	(wire
+		(pts
+			(xy 133.35 76.2) (xy 115.57 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "29cc32db-5394-42d2-bf10-dcd171a573c9")
+	)
+	(wire
+		(pts
+			(xy 88.9 146.05) (xy 95.25 146.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2d0a1707-d073-4d47-a4fb-1828ff8502a9")
+	)
+	(wire
+		(pts
+			(xy 88.9 146.05) (xy 88.9 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2e8277f5-f6eb-4863-9085-fea63139210a")
+	)
+	(wire
+		(pts
+			(xy 132.08 58.42) (xy 137.16 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2fab681a-562d-420e-a858-1a1d93016608")
+	)
+	(wire
+		(pts
+			(xy 163.83 146.05) (xy 163.83 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "30497f1a-e962-4143-b7aa-b75caa5df465")
+	)
+	(wire
+		(pts
+			(xy 184.15 55.88) (xy 184.15 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "34a7062b-fcf6-47b2-853a-0dc74c5eb27b")
+	)
+	(wire
+		(pts
+			(xy 184.15 115.57) (xy 184.15 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "386c8062-94db-4c38-a42e-909c8b900b3b")
+	)
+	(wire
+		(pts
+			(xy 130.81 130.81) (xy 130.81 146.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "394dfa72-c733-44c2-a34f-20ff6e74fa54")
+	)
+	(wire
+		(pts
+			(xy 142.24 38.1) (xy 142.24 26.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3978b23a-d70f-4b54-ae5c-e55a2f308c42")
+	)
+	(wire
+		(pts
+			(xy 142.24 115.57) (xy 142.24 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3b11a3aa-058b-40ce-94e2-1af471e21771")
+	)
+	(wire
+		(pts
+			(xy 100.33 55.88) (xy 100.33 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3bf28ed5-a135-4098-aa77-df7f625f59cd")
+	)
+	(wire
+		(pts
+			(xy 134.62 110.49) (xy 134.62 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "42519d52-f891-41e4-b37d-2a1f944c0e1e")
+	)
+	(wire
+		(pts
+			(xy 100.33 29.21) (xy 100.33 26.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4268bafb-0537-4090-a8b4-d65254187d52")
+	)
+	(wire
+		(pts
+			(xy 184.15 26.67) (xy 184.15 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "481550a1-67b2-48d7-a8bd-2897e6823a85")
+	)
+	(wire
+		(pts
+			(xy 173.99 58.42) (xy 179.07 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4cdec273-5298-45e0-875c-378d6318c578")
+	)
+	(wire
+		(pts
+			(xy 173.99 29.21) (xy 179.07 29.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4dd0e9a6-2252-46a2-bf32-6ab553f0316b")
+	)
+	(wire
+		(pts
+			(xy 100.33 88.9) (xy 93.98 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4dd5a250-ef03-4ac1-a8dd-562f33d99442")
+	)
+	(wire
+		(pts
+			(xy 142.24 144.78) (xy 142.24 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "53dc204a-a95a-45c4-a125-841d378466cc")
+	)
+	(wire
+		(pts
+			(xy 92.71 139.7) (xy 92.71 137.16)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "573b3b0a-dadc-4908-bb17-8447ac1dfae5")
+	)
+	(wire
+		(pts
+			(xy 97.79 30.48) (xy 97.79 26.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "57eed984-5e17-4d2f-84a2-826a67ea2708")
+	)
+	(wire
+		(pts
+			(xy 130.81 146.05) (xy 137.16 146.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5bb643d0-f98e-413c-99a2-719d8b51c25f")
+	)
+	(wire
+		(pts
+			(xy 186.69 81.28) (xy 146.05 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5be869fb-f557-4273-ac65-b7b7ee7a98c2")
+	)
+	(wire
+		(pts
+			(xy 137.16 146.05) (xy 137.16 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5de647c8-3e32-4574-97eb-b722362b998e")
+	)
+	(wire
+		(pts
+			(xy 95.25 93.98) (xy 105.41 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "604605fe-09a9-46b3-9b85-cca15d468415")
+	)
+	(wire
+		(pts
+			(xy 142.24 58.42) (xy 158.75 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6193f57b-aa88-4151-b95a-43a330bd50fc")
+	)
+	(wire
+		(pts
+			(xy 168.91 83.82) (xy 146.05 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "67282832-9196-4614-8c83-e1e5999a3cf9")
+	)
+	(wire
+		(pts
+			(xy 137.16 58.42) (xy 137.16 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "67cd8cfe-080e-4cea-a6f4-ca662ab5cbba")
+	)
+	(wire
+		(pts
+			(xy 137.16 29.21) (xy 137.16 26.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "681e35bc-9e35-4176-87a6-e7667ee86ad3")
+	)
+	(wire
+		(pts
+			(xy 105.41 93.98) (xy 105.41 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6ad7549a-c79d-4a5e-b9e2-01fde629809b")
+	)
+	(wire
+		(pts
+			(xy 163.83 86.36) (xy 146.05 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6c56f158-5506-472b-ac1c-c4a5a2de53a9")
+	)
+	(wire
+		(pts
+			(xy 95.25 29.21) (xy 95.25 26.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6db92b0f-f041-446a-b5e9-61e7c1e9b8aa")
+	)
+	(wire
+		(pts
+			(xy 121.92 73.66) (xy 121.92 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6f97982e-2cc2-4f77-8695-a37271226000")
+	)
+	(wire
+		(pts
+			(xy 133.35 81.28) (xy 100.33 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "718c81f4-ac7e-4545-9479-7ffc78454be3")
+	)
+	(wire
+		(pts
+			(xy 100.33 144.78) (xy 100.33 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7578984b-1a3d-4642-9520-8dcd4d0bc614")
+	)
+	(wire
+		(pts
+			(xy 90.17 29.21) (xy 95.25 29.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7811cc87-e730-4dc4-8bb4-e69efa717d4f")
+	)
+	(wire
+		(pts
+			(xy 97.79 137.16) (xy 97.79 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "79cf9a1c-a9cc-495e-8493-fbecf76c2aec")
+	)
+	(wire
+		(pts
+			(xy 139.7 30.48) (xy 139.7 26.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a2d8105-283e-4c2b-bbd1-eb5f17187784")
+	)
+	(wire
+		(pts
+			(xy 121.92 38.1) (xy 142.24 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7b2bb499-5267-481c-a018-e6f3343294ca")
+	)
+	(wire
+		(pts
+			(xy 115.57 76.2) (xy 115.57 29.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8117572e-c939-4985-bca1-7c4a7d69e8da")
+	)
+	(wire
+		(pts
+			(xy 90.17 58.42) (xy 95.25 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8255ccac-46e5-41c6-b301-3c94cc3027cd")
+	)
+	(wire
+		(pts
+			(xy 133.35 73.66) (xy 121.92 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "875ec42e-2fe9-4025-acac-28890142a9ad")
+	)
+	(wire
+		(pts
+			(xy 137.16 116.84) (xy 120.65 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8a89cb67-2479-4fd2-9406-92d473ff9844")
+	)
+	(wire
+		(pts
+			(xy 92.71 110.49) (xy 92.71 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8c86e436-f511-4202-9c2a-3e931ddb88ca")
+	)
+	(wire
+		(pts
+			(xy 92.71 137.16) (xy 97.79 137.16)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8f5b10ec-ef2b-44de-b741-7c41d1c6f611")
+	)
+	(wire
+		(pts
+			(xy 95.25 58.42) (xy 95.25 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "94546566-8c9c-49cf-a2b3-f088edfc72a1")
+	)
+	(wire
+		(pts
+			(xy 95.25 146.05) (xy 95.25 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9675b7eb-4db8-4438-8129-57a5a903832b")
+	)
+	(wire
+		(pts
+			(xy 137.16 119.38) (xy 137.16 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9822897f-cf36-4175-b0e5-1262b414ece0")
+	)
+	(wire
+		(pts
+			(xy 90.17 54.61) (xy 90.17 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "99278314-46e6-4659-b0b3-ea694cebaeff")
+	)
+	(wire
+		(pts
+			(xy 158.75 73.66) (xy 146.05 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9a65df31-d9db-4265-9a45-91dcf15d2b9b")
+	)
+	(wire
+		(pts
+			(xy 184.15 144.78) (xy 184.15 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9c4ade2d-5e81-42c2-a571-c6c8e44d34c6")
+	)
+	(wire
+		(pts
+			(xy 179.07 146.05) (xy 179.07 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9ef42b39-e4e8-4314-a186-c2296bd86f3d")
+	)
+	(wire
+		(pts
+			(xy 157.48 88.9) (xy 146.05 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a083f998-9550-471f-a6ca-6d32e63e05c8")
+	)
+	(wire
+		(pts
+			(xy 181.61 30.48) (xy 181.61 26.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a8138855-1ff5-41de-894e-dc878042b62f")
+	)
+	(wire
+		(pts
+			(xy 179.07 58.42) (xy 179.07 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "adc4a488-2681-4178-9ac0-e68a4bb1f245")
+	)
+	(wire
+		(pts
+			(xy 158.75 58.42) (xy 158.75 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ae75d4dc-d1a0-44f0-bd40-025e9f9fbb04")
+	)
+	(wire
+		(pts
+			(xy 115.57 86.36) (xy 133.35 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b395ab5d-e6dd-4c89-84bd-a3c1a9dc4e7b")
+	)
+	(wire
+		(pts
+			(xy 186.69 82.55) (xy 186.69 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b6673c8b-28b2-41a7-8329-b189a877d8e6")
+	)
+	(wire
+		(pts
+			(xy 100.33 115.57) (xy 100.33 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b89f742c-8bc6-41d6-acfa-9dd8b8513fd0")
+	)
+	(wire
+		(pts
+			(xy 173.99 25.4) (xy 173.99 29.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bc456d77-4ddb-4a92-a2f6-06901b48f83b")
+	)
+	(wire
+		(pts
+			(xy 181.61 59.69) (xy 181.61 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bc77aa05-fb35-42b1-a496-008c27300db3")
+	)
+	(wire
+		(pts
+			(xy 139.7 107.95) (xy 139.7 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bec70953-87d6-44d8-b2d0-ed2168f41d76")
+	)
+	(wire
+		(pts
+			(xy 176.53 107.95) (xy 181.61 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c13c1978-fd74-4ab0-81fb-ce1ad2048553")
+	)
+	(wire
+		(pts
+			(xy 176.53 139.7) (xy 176.53 137.16)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c4540ebc-06f5-4b1d-97cc-8d6679a5f055")
+	)
+	(wire
+		(pts
+			(xy 184.15 78.74) (xy 146.05 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c4f66d6c-60a9-4798-af40-36aa4ac62f51")
+	)
+	(wire
+		(pts
+			(xy 115.57 29.21) (xy 100.33 29.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cb73e2bd-182d-449b-af00-bbb14f17462d")
+	)
+	(wire
+		(pts
+			(xy 176.53 110.49) (xy 176.53 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d2f887ed-4291-4b36-9157-5ac5d279d887")
+	)
+	(wire
+		(pts
+			(xy 90.17 25.4) (xy 90.17 29.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d462d1f7-6487-4478-b48b-ead43cc759c9")
+	)
+	(wire
+		(pts
+			(xy 120.65 88.9) (xy 133.35 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d76166bf-d686-465f-9dc6-54dca175e7d2")
+	)
+	(wire
+		(pts
+			(xy 115.57 130.81) (xy 115.57 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d7654465-8b23-4b70-83dd-d73f313633b1")
+	)
+	(wire
+		(pts
+			(xy 142.24 55.88) (xy 142.24 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dbc96914-2723-48da-a567-c7d18521c55e")
+	)
+	(wire
+		(pts
+			(xy 100.33 81.28) (xy 100.33 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "def8c3c9-f60c-426f-813e-5f73fe0d6ee7")
+	)
+	(wire
+		(pts
+			(xy 163.83 146.05) (xy 179.07 146.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e21d84fb-4b3c-4d94-a20f-00d9ff0a6674")
+	)
+	(wire
+		(pts
+			(xy 168.91 116.84) (xy 168.91 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e790f796-497e-4c14-8dbc-f0e5b3a296be")
+	)
+	(wire
+		(pts
+			(xy 100.33 78.74) (xy 133.35 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e82d510f-9c73-4fcc-9d9d-d44539e398c9")
+	)
+	(wire
+		(pts
+			(xy 132.08 29.21) (xy 137.16 29.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e908c236-188a-4bc2-a234-a5d3fb8ec7d4")
+	)
+	(wire
+		(pts
+			(xy 184.15 38.1) (xy 163.83 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eb152514-4ff1-4d76-8fac-ba6645d57999")
+	)
+	(wire
+		(pts
+			(xy 163.83 38.1) (xy 163.83 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ebb62569-976d-4700-9cd7-3cf30cb10a9a")
+	)
+	(wire
+		(pts
+			(xy 139.7 137.16) (xy 139.7 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ece6fb5a-31c1-430a-9fc3-e6f458faeeb8")
+	)
+	(wire
+		(pts
+			(xy 168.91 116.84) (xy 179.07 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f5e789af-4136-486d-83a5-71a8ffe8ef31")
+	)
+	(wire
+		(pts
+			(xy 134.62 137.16) (xy 139.7 137.16)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f69b8e16-5c37-40f2-9039-129811830a93")
+	)
+	(wire
+		(pts
+			(xy 97.79 59.69) (xy 97.79 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f86a4965-e5ec-4181-81f3-cfda6ccd2f3c")
+	)
+	(wire
+		(pts
+			(xy 95.25 119.38) (xy 95.25 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fbabde55-159e-4495-9513-fe3612c1a179")
+	)
+	(wire
+		(pts
+			(xy 97.79 107.95) (xy 97.79 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fdc579b3-013a-4716-8aba-173b74f7c921")
+	)
+	(symbol
+		(lib_id "Logic Gate Symbols:Linear_Hall_Effect_Sensor")
+		(at 181.61 50.8 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "0473f901-2cb6-4edb-a43e-9ccdea7c8458")
+		(property "Reference" "U6"
+			(at 185.928 51.054 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "~"
+			(at 186.69 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Logic Board Footprints:Linear Hall Effect Sensor SS49E"
+			(at 181.61 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://uc91381c3f3129ba0fabff32497f.dl.dropboxusercontent.com/cd/0/inline2/Crkrt_J2gHvRIbNUkCCbrtviP03OYfy4hp6psAkjwI3ArpseT23NXvglgOoEGZsEzH91FuRDR7x_WUHC8IvfPOmqYlsIbF3VOsEMD4OB0wtLfV1F7Z-lUu8kXxdE4K6nT9B3j1FziYycLO8p3hnAFl5IpohnpRiInt945i-hl2UYBh_s7oENjeaKQ96_NJcrk2h7IVNQhXAlL3Pyt89lrlaBVRJh0pi2Xq1SOyxR0W9gfvvoVGF2LUlwEm34AgMHAUa0OTBB7NEouQbOfvYg-_M700AHgt3U13Jfahqq_kweS55q7CP_MQi5__Ie4yVHYNAqLx693DVcoYDF7EZLd9gO6MryuryBLPviIH80ee948A/file"
+			(at 181.61 61.214 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "SS49E Linear Hall-Effect Sensor"
+			(at 165.862 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "1"
+			(uuid "7a2a8f2e-3e38-4277-bc61-29d872801055")
+		)
+		(pin "2"
+			(uuid "8e40e9ce-7d21-43cf-bc5f-8629d0b76b9a")
+		)
+		(pin "3"
+			(uuid "855d8366-d631-4f76-ae99-ddba0fe4d427")
+		)
+		(instances
+			(project "Logic board magnetic sensor"
+				(path "/0412001e-ce1e-4114-8b47-96e686d3050a"
+					(reference "U6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 139.7 59.69 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "05306ae8-4c41-4f47-8634-6ef8f877ca7e")
+		(property "Reference" "#PWR011"
+			(at 139.7 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 139.7 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 139.7 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 139.7 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 139.7 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "204b72e5-5a0e-45a4-89a9-5406b8b34ce6")
+		)
+		(instances
+			(project "Logic board magnetic sensor"
+				(path "/0412001e-ce1e-4114-8b47-96e686d3050a"
+					(reference "#PWR011")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 186.69 82.55 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1f52d519-acb2-4719-ac53-58488411114b")
+		(property "Reference" "#PWR013"
+			(at 186.69 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 186.69 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 186.69 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 186.69 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 186.69 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f3f5bbc2-e76c-4bea-86aa-a6464597b176")
+		)
+		(instances
+			(project "Logic board magnetic sensor"
+				(path "/0412001e-ce1e-4114-8b47-96e686d3050a"
+					(reference "#PWR013")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:VCC")
+		(at 142.24 144.78 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "26df4247-a66e-49ac-9612-4e73ad74c055")
+		(property "Reference" "#PWR024"
+			(at 142.24 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VCC"
+			(at 142.24 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 142.24 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 142.24 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VCC\""
+			(at 142.24 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "43ada7b2-8136-44b6-a5c2-2ec45b04cea1")
+		)
+		(instances
+			(project "Logic board magnetic sensor"
+				(path "/0412001e-ce1e-4114-8b47-96e686d3050a"
+					(reference "#PWR024")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 92.71 139.7 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2a85520c-133c-4cf4-b5c8-a2167c625338")
+		(property "Reference" "#PWR025"
+			(at 92.71 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 92.71 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 92.71 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 92.71 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 92.71 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "bc045478-4dfa-4fda-939f-2ba5620e6c1c")
+		)
+		(instances
+			(project "Logic board magnetic sensor"
+				(path "/0412001e-ce1e-4114-8b47-96e686d3050a"
+					(reference "#PWR025")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:VCC")
+		(at 90.17 25.4 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "36351d1a-d1ca-494b-8438-19067a10b220")
+		(property "Reference" "#PWR01"
+			(at 90.17 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VCC"
+			(at 90.17 20.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 90.17 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 90.17 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VCC\""
+			(at 90.17 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "00734e68-7d90-4faa-8c25-d8d518e9d0ad")
+		)
+		(instances
+			(project ""
+				(path "/0412001e-ce1e-4114-8b47-96e686d3050a"
+					(reference "#PWR01")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Logic Gate Symbols:Linear_Hall_Effect_Sensor")
+		(at 181.61 153.67 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "370ffb78-a533-4e72-b2ff-907995d2f60e")
+		(property "Reference" "U7"
+			(at 177.292 153.416 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "~"
+			(at 176.53 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Logic Board Footprints:Linear Hall Effect Sensor SS49E"
+			(at 181.61 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://uc91381c3f3129ba0fabff32497f.dl.dropboxusercontent.com/cd/0/inline2/Crkrt_J2gHvRIbNUkCCbrtviP03OYfy4hp6psAkjwI3ArpseT23NXvglgOoEGZsEzH91FuRDR7x_WUHC8IvfPOmqYlsIbF3VOsEMD4OB0wtLfV1F7Z-lUu8kXxdE4K6nT9B3j1FziYycLO8p3hnAFl5IpohnpRiInt945i-hl2UYBh_s7oENjeaKQ96_NJcrk2h7IVNQhXAlL3Pyt89lrlaBVRJh0pi2Xq1SOyxR0W9gfvvoVGF2LUlwEm34AgMHAUa0OTBB7NEouQbOfvYg-_M700AHgt3U13Jfahqq_kweS55q7CP_MQi5__Ie4yVHYNAqLx693DVcoYDF7EZLd9gO6MryuryBLPviIH80ee948A/file"
+			(at 181.61 143.256 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "SS49E Linear Hall-Effect Sensor"
+			(at 197.358 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "1"
+			(uuid "d8d8b59d-5287-48e8-b23c-dd9c862ffaa9")
+		)
+		(pin "2"
+			(uuid "c27c6315-e692-40cc-aced-7537601808aa")
+		)
+		(pin "3"
+			(uuid "f27b2177-f7b9-4570-9250-e4e1598f0d2d")
+		)
+		(instances
+			(project "Logic board magnetic sensor"
+				(path "/0412001e-ce1e-4114-8b47-96e686d3050a"
+					(reference "U7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 176.53 139.7 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "376ef108-0d84-4b91-b249-c0507d659dd2")
+		(property "Reference" "#PWR017"
+			(at 176.53 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 176.53 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 176.53 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 176.53 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 176.53 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c39e95c2-8362-4ddc-9898-0c469102509b")
+		)
+		(instances
+			(project "Logic board magnetic sensor"
+				(path "/0412001e-ce1e-4114-8b47-96e686d3050a"
+					(reference "#PWR017")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 215.9 101.6 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "385a0ad9-af18-4f02-84ca-17ef101cf120")
+		(property "Reference" "H2"
+			(at 218.44 100.3299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 218.44 102.8699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+			(at 215.9 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 215.9 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 215.9 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "Logic board magnetic sensor"
+				(path "/0412001e-ce1e-4114-8b47-96e686d3050a"
+					(reference "H2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:VCC")
+		(at 142.24 115.57 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3a8bc247-e388-48d2-882d-1700ef6b53fa")
+		(property "Reference" "#PWR020"
+			(at 142.24 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VCC"
+			(at 142.24 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 142.24 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 142.24 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VCC\""
+			(at 142.24 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ce6461c0-ce7c-4b67-bb39-d30d23c54425")
+		)
+		(instances
+			(project "Logic board magnetic sensor"
+				(path "/0412001e-ce1e-4114-8b47-96e686d3050a"
+					(reference "#PWR020")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Logic Gate Symbols:Linear_Hall_Effect_Sensor")
+		(at 139.7 124.46 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "3f892763-59ff-401e-a76b-e105fdd18aa6")
+		(property "Reference" "U10"
+			(at 135.382 124.206 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "~"
+			(at 134.62 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Logic Board Footprints:Linear Hall Effect Sensor SS49E"
+			(at 139.7 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://uc91381c3f3129ba0fabff32497f.dl.dropboxusercontent.com/cd/0/inline2/Crkrt_J2gHvRIbNUkCCbrtviP03OYfy4hp6psAkjwI3ArpseT23NXvglgOoEGZsEzH91FuRDR7x_WUHC8IvfPOmqYlsIbF3VOsEMD4OB0wtLfV1F7Z-lUu8kXxdE4K6nT9B3j1FziYycLO8p3hnAFl5IpohnpRiInt945i-hl2UYBh_s7oENjeaKQ96_NJcrk2h7IVNQhXAlL3Pyt89lrlaBVRJh0pi2Xq1SOyxR0W9gfvvoVGF2LUlwEm34AgMHAUa0OTBB7NEouQbOfvYg-_M700AHgt3U13Jfahqq_kweS55q7CP_MQi5__Ie4yVHYNAqLx693DVcoYDF7EZLd9gO6MryuryBLPviIH80ee948A/file"
+			(at 139.7 114.046 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "SS49E Linear Hall-Effect Sensor"
+			(at 155.448 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "1"
+			(uuid "b3f7aaf5-bddd-4b38-8f4f-454dfc355cd4")
+		)
+		(pin "2"
+			(uuid "a1d171ec-257f-42fa-bb14-b7d9e4bb086f")
+		)
+		(pin "3"
+			(uuid "ea8c20f6-b673-47f6-aad9-01b4d7b7cea8")
+		)
+		(instances
+			(project "Logic board magnetic sensor"
+				(path "/0412001e-ce1e-4114-8b47-96e686d3050a"
+					(reference "U10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_02x07_Odd_Even")
+		(at 138.43 81.28 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3fbc1184-dc00-4d45-a45d-cdebb5665ad2")
+		(property "Reference" "J2"
+			(at 139.7 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_02x07_Odd_Even"
+			(at 139.7 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_IDC:IDC-Header_2x07_P2.54mm_Vertical"
+			(at 138.43 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 138.43 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, double row, 02x07, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 138.43 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "5"
+			(uuid "723037b3-f4e9-42c9-a341-aa4daffb1dd4")
+		)
+		(pin "1"
+			(uuid "9553fc7f-9a62-446d-b453-8d5bfa297429")
+		)
+		(pin "3"
+			(uuid "0720ac7f-e766-4b4c-9c8f-c1580aea7c04")
+		)
+		(pin "7"
+			(uuid "6d201709-32ef-4996-9692-cd14db2e74c0")
+		)
+		(pin "11"
+			(uuid "e73ebce8-cda3-4ca3-a809-25d6f373c83e")
+		)
+		(pin "2"
+			(uuid "4e426598-4fb2-4985-b9a0-7acc525a8305")
+		)
+		(pin "9"
+			(uuid "8e906b86-8547-47c7-95e2-328b047fa5d3")
+		)
+		(pin "4"
+			(uuid "0896e8fa-136f-4ebc-b958-c4897444f5e9")
+		)
+		(pin "13"
+			(uuid "b96f38bb-b301-496e-887f-0f1ab691c66d")
+		)
+		(pin "6"
+			(uuid "b18bbf60-c007-4633-ad2c-d13f25c09970")
+		)
+		(pin "14"
+			(uuid "55d6802f-40f6-4c94-a9b1-aad32f106f41")
+		)
+		(pin "12"
+			(uuid "5e9042c5-ae54-485a-b659-a2f26ab1c1ee")
+		)
+		(pin "10"
+			(uuid "566bf1a9-de04-45ec-8e89-4dbbd357f865")
+		)
+		(pin "8"
+			(uuid "974a8918-6a5e-4a77-9773-884b89424732")
+		)
+		(instances
+			(project ""
+				(path "/0412001e-ce1e-4114-8b47-96e686d3050a"
+					(reference "J2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:VCC")
+		(at 173.99 25.4 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4d86c21c-d646-40eb-8cb7-2f820e3e1699")
+		(property "Reference" "#PWR03"
+			(at 173.99 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VCC"
+			(at 173.99 20.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 173.99 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 173.99 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VCC\""
+			(at 173.99 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9e7de7ca-2a4e-4294-b9b8-0697670128f0")
+		)
+		(instances
+			(project "Logic board magnetic sensor"
+				(path "/0412001e-ce1e-4114-8b47-96e686d3050a"
+					(reference "#PWR03")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 181.61 30.48 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "51a5ff25-a007-456c-9d78-ecd283474e51")
+		(property "Reference" "#PWR09"
+			(at 181.61 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 181.61 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 181.61 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 181.61 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 181.61 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "36fad58e-1b96-430a-872f-33fe9af56bd0")
+		)
+		(instances
+			(project "Logic board magnetic sensor"
+				(path "/0412001e-ce1e-4114-8b47-96e686d3050a"
+					(reference "#PWR09")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Logic Gate Symbols:Linear_Hall_Effect_Sensor")
+		(at 139.7 153.67 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "54312239-8268-454d-ad12-7b58cb77f2b7")
+		(property "Reference" "U9"
+			(at 135.382 153.416 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "~"
+			(at 134.62 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Logic Board Footprints:Linear Hall Effect Sensor SS49E"
+			(at 139.7 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://uc91381c3f3129ba0fabff32497f.dl.dropboxusercontent.com/cd/0/inline2/Crkrt_J2gHvRIbNUkCCbrtviP03OYfy4hp6psAkjwI3ArpseT23NXvglgOoEGZsEzH91FuRDR7x_WUHC8IvfPOmqYlsIbF3VOsEMD4OB0wtLfV1F7Z-lUu8kXxdE4K6nT9B3j1FziYycLO8p3hnAFl5IpohnpRiInt945i-hl2UYBh_s7oENjeaKQ96_NJcrk2h7IVNQhXAlL3Pyt89lrlaBVRJh0pi2Xq1SOyxR0W9gfvvoVGF2LUlwEm34AgMHAUa0OTBB7NEouQbOfvYg-_M700AHgt3U13Jfahqq_kweS55q7CP_MQi5__Ie4yVHYNAqLx693DVcoYDF7EZLd9gO6MryuryBLPviIH80ee948A/file"
+			(at 139.7 143.256 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "SS49E Linear Hall-Effect Sensor"
+			(at 155.448 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "1"
+			(uuid "f2d65fef-619b-442b-aae9-ba460f839500")
+		)
+		(pin "2"
+			(uuid "c36a887a-c8b0-415d-ace7-6562aa102ab1")
+		)
+		(pin "3"
+			(uuid "0161ea88-18d4-49c6-b71e-8406159df493")
+		)
+		(instances
+			(project "Logic board magnetic sensor"
+				(path "/0412001e-ce1e-4114-8b47-96e686d3050a"
+					(reference "U9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:VCC")
+		(at 100.33 115.57 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "652786a0-d42a-486b-aa63-bb13736d3a9c")
+		(property "Reference" "#PWR016"
+			(at 100.33 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VCC"
+			(at 100.33 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 100.33 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 100.33 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VCC\""
+			(at 100.33 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "86121aad-b5c4-4a2c-b260-2fbc6e28efa8")
+		)
+		(instances
+			(project "Logic board magnetic sensor"
+				(path "/0412001e-ce1e-4114-8b47-96e686d3050a"
+					(reference "#PWR016")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Logic Gate Symbols:Linear_Hall_Effect_Sensor")
+		(at 97.79 50.8 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6acccf4b-4fc2-42ce-a593-dc9252c4c68d")
+		(property "Reference" "U2"
+			(at 102.108 51.054 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "~"
+			(at 102.87 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Logic Board Footprints:Linear Hall Effect Sensor SS49E"
+			(at 97.79 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://uc91381c3f3129ba0fabff32497f.dl.dropboxusercontent.com/cd/0/inline2/Crkrt_J2gHvRIbNUkCCbrtviP03OYfy4hp6psAkjwI3ArpseT23NXvglgOoEGZsEzH91FuRDR7x_WUHC8IvfPOmqYlsIbF3VOsEMD4OB0wtLfV1F7Z-lUu8kXxdE4K6nT9B3j1FziYycLO8p3hnAFl5IpohnpRiInt945i-hl2UYBh_s7oENjeaKQ96_NJcrk2h7IVNQhXAlL3Pyt89lrlaBVRJh0pi2Xq1SOyxR0W9gfvvoVGF2LUlwEm34AgMHAUa0OTBB7NEouQbOfvYg-_M700AHgt3U13Jfahqq_kweS55q7CP_MQi5__Ie4yVHYNAqLx693DVcoYDF7EZLd9gO6MryuryBLPviIH80ee948A/file"
+			(at 97.79 61.214 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "SS49E Linear Hall-Effect Sensor"
+			(at 82.042 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "1"
+			(uuid "1e8aa0b9-25fd-475b-9ea6-0c7e461fd01f")
+		)
+		(pin "2"
+			(uuid "7853ab31-a61d-4793-8c75-7b0e05b0db99")
+		)
+		(pin "3"
+			(uuid "45875cf1-8ce9-42c4-9301-b72da5aa59ed")
+		)
+		(instances
+			(project "Logic board magnetic sensor"
+				(path "/0412001e-ce1e-4114-8b47-96e686d3050a"
+					(reference "U2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:VCC")
+		(at 184.15 115.57 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "790ca6ba-2105-4132-96e0-2b65d9d1bda2")
+		(property "Reference" "#PWR021"
+			(at 184.15 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VCC"
+			(at 184.15 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 184.15 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 184.15 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VCC\""
+			(at 184.15 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1c1acaaf-bafb-46e5-aa8c-8c38856be5bd")
+		)
+		(instances
+			(project "Logic board magnetic sensor"
+				(path "/0412001e-ce1e-4114-8b47-96e686d3050a"
+					(reference "#PWR021")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Logic Gate Symbols:Linear_Hall_Effect_Sensor")
+		(at 181.61 124.46 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "82dfbeaf-942a-473a-bf19-f2f0548bf0d6")
+		(property "Reference" "U8"
+			(at 177.292 124.206 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "~"
+			(at 176.53 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Logic Board Footprints:Linear Hall Effect Sensor SS49E"
+			(at 181.61 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://uc91381c3f3129ba0fabff32497f.dl.dropboxusercontent.com/cd/0/inline2/Crkrt_J2gHvRIbNUkCCbrtviP03OYfy4hp6psAkjwI3ArpseT23NXvglgOoEGZsEzH91FuRDR7x_WUHC8IvfPOmqYlsIbF3VOsEMD4OB0wtLfV1F7Z-lUu8kXxdE4K6nT9B3j1FziYycLO8p3hnAFl5IpohnpRiInt945i-hl2UYBh_s7oENjeaKQ96_NJcrk2h7IVNQhXAlL3Pyt89lrlaBVRJh0pi2Xq1SOyxR0W9gfvvoVGF2LUlwEm34AgMHAUa0OTBB7NEouQbOfvYg-_M700AHgt3U13Jfahqq_kweS55q7CP_MQi5__Ie4yVHYNAqLx693DVcoYDF7EZLd9gO6MryuryBLPviIH80ee948A/file"
+			(at 181.61 114.046 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "SS49E Linear Hall-Effect Sensor"
+			(at 197.358 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "1"
+			(uuid "9c197aff-fc26-4316-9a5c-fbb6e6fc2cc1")
+		)
+		(pin "2"
+			(uuid "64700c33-d27c-45a7-860d-fc6da94fdf0b")
+		)
+		(pin "3"
+			(uuid "8274152d-ceb6-42f2-8bff-dec16b008bdf")
+		)
+		(instances
+			(project "Logic board magnetic sensor"
+				(path "/0412001e-ce1e-4114-8b47-96e686d3050a"
+					(reference "U8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 234.95 101.6 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "846fc54a-335e-4f7b-8efa-8d57ce4a4b3c")
+		(property "Reference" "H4"
+			(at 237.49 100.3299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 237.49 102.8699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+			(at 234.95 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 234.95 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 234.95 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "Logic board magnetic sensor"
+				(path "/0412001e-ce1e-4114-8b47-96e686d3050a"
+					(reference "H4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 134.62 110.49 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "90bf8ce2-9af3-4540-bdf8-98ad5bd2f9b2")
+		(property "Reference" "#PWR022"
+			(at 134.62 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 134.62 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 134.62 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 134.62 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 134.62 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "10778d76-883b-4fe8-8cd0-9059fcf96ea5")
+		)
+		(instances
+			(project "Logic board magnetic sensor"
+				(path "/0412001e-ce1e-4114-8b47-96e686d3050a"
+					(reference "#PWR022")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Logic Gate Symbols:Linear_Hall_Effect_Sensor")
+		(at 97.79 124.46 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "91134fe9-229b-4520-a37a-93b3f4eeab47")
+		(property "Reference" "U12"
+			(at 93.472 124.206 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "~"
+			(at 92.71 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Logic Board Footprints:Linear Hall Effect Sensor SS49E"
+			(at 97.79 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://uc91381c3f3129ba0fabff32497f.dl.dropboxusercontent.com/cd/0/inline2/Crkrt_J2gHvRIbNUkCCbrtviP03OYfy4hp6psAkjwI3ArpseT23NXvglgOoEGZsEzH91FuRDR7x_WUHC8IvfPOmqYlsIbF3VOsEMD4OB0wtLfV1F7Z-lUu8kXxdE4K6nT9B3j1FziYycLO8p3hnAFl5IpohnpRiInt945i-hl2UYBh_s7oENjeaKQ96_NJcrk2h7IVNQhXAlL3Pyt89lrlaBVRJh0pi2Xq1SOyxR0W9gfvvoVGF2LUlwEm34AgMHAUa0OTBB7NEouQbOfvYg-_M700AHgt3U13Jfahqq_kweS55q7CP_MQi5__Ie4yVHYNAqLx693DVcoYDF7EZLd9gO6MryuryBLPviIH80ee948A/file"
+			(at 97.79 114.046 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "SS49E Linear Hall-Effect Sensor"
+			(at 113.538 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "1"
+			(uuid "89b0ca42-48e0-4f34-bf89-79690a936dff")
+		)
+		(pin "2"
+			(uuid "5b0cd19a-339a-4201-a6b4-5da0a63f961c")
+		)
+		(pin "3"
+			(uuid "63177ca2-30b9-49bd-becc-0515b3ead101")
+		)
+		(instances
+			(project "Logic board magnetic sensor"
+				(path "/0412001e-ce1e-4114-8b47-96e686d3050a"
+					(reference "U12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:VCC")
+		(at 132.08 54.61 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9122f0b7-6f40-4356-b2d8-be32d3a1ac09")
+		(property "Reference" "#PWR05"
+			(at 132.08 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VCC"
+			(at 132.08 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 132.08 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 132.08 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VCC\""
+			(at 132.08 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "de3784c7-430c-4284-aded-f8d2c6a37f59")
+		)
+		(instances
+			(project "Logic board magnetic sensor"
+				(path "/0412001e-ce1e-4114-8b47-96e686d3050a"
+					(reference "#PWR05")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Logic Gate Symbols:Linear_Hall_Effect_Sensor")
+		(at 97.79 153.67 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "94cb99e2-7881-4a79-b84d-80bbe8b9cad4")
+		(property "Reference" "U11"
+			(at 93.472 153.416 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "~"
+			(at 92.71 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Logic Board Footprints:Linear Hall Effect Sensor SS49E"
+			(at 97.79 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://uc91381c3f3129ba0fabff32497f.dl.dropboxusercontent.com/cd/0/inline2/Crkrt_J2gHvRIbNUkCCbrtviP03OYfy4hp6psAkjwI3ArpseT23NXvglgOoEGZsEzH91FuRDR7x_WUHC8IvfPOmqYlsIbF3VOsEMD4OB0wtLfV1F7Z-lUu8kXxdE4K6nT9B3j1FziYycLO8p3hnAFl5IpohnpRiInt945i-hl2UYBh_s7oENjeaKQ96_NJcrk2h7IVNQhXAlL3Pyt89lrlaBVRJh0pi2Xq1SOyxR0W9gfvvoVGF2LUlwEm34AgMHAUa0OTBB7NEouQbOfvYg-_M700AHgt3U13Jfahqq_kweS55q7CP_MQi5__Ie4yVHYNAqLx693DVcoYDF7EZLd9gO6MryuryBLPviIH80ee948A/file"
+			(at 97.79 143.256 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "SS49E Linear Hall-Effect Sensor"
+			(at 113.538 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "1"
+			(uuid "246c8435-93e1-488d-b291-99bbe0b437db")
+		)
+		(pin "2"
+			(uuid "df0ce85b-4d0d-491f-89cb-e6583e7b0365")
+		)
+		(pin "3"
+			(uuid "5cc08faf-cac2-4d42-8703-016c5cff7b65")
+		)
+		(instances
+			(project "Logic board magnetic sensor"
+				(path "/0412001e-ce1e-4114-8b47-96e686d3050a"
+					(reference "U11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 176.53 110.49 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "97f7e668-0041-4663-a960-2871da0558ba")
+		(property "Reference" "#PWR019"
+			(at 176.53 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 176.53 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 176.53 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 176.53 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 176.53 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b7d08c6d-1691-4464-8cdb-8e7e84461ce2")
+		)
+		(instances
+			(project "Logic board magnetic sensor"
+				(path "/0412001e-ce1e-4114-8b47-96e686d3050a"
+					(reference "#PWR019")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 97.79 59.69 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a219a672-cced-4214-8864-ec39584091d1")
+		(property "Reference" "#PWR010"
+			(at 97.79 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 97.79 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 97.79 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 97.79 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 97.79 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d728c534-2bff-4d9e-8faa-c1178f27ef6d")
+		)
+		(instances
+			(project "Logic board magnetic sensor"
+				(path "/0412001e-ce1e-4114-8b47-96e686d3050a"
+					(reference "#PWR010")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Logic Gate Symbols:Linear_Hall_Effect_Sensor")
+		(at 97.79 21.59 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a43b326a-0465-480a-97ec-6ee240ca9004")
+		(property "Reference" "U1"
+			(at 102.108 21.844 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "~"
+			(at 102.87 21.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Logic Board Footprints:Linear Hall Effect Sensor SS49E"
+			(at 97.79 21.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://uc91381c3f3129ba0fabff32497f.dl.dropboxusercontent.com/cd/0/inline2/Crkrt_J2gHvRIbNUkCCbrtviP03OYfy4hp6psAkjwI3ArpseT23NXvglgOoEGZsEzH91FuRDR7x_WUHC8IvfPOmqYlsIbF3VOsEMD4OB0wtLfV1F7Z-lUu8kXxdE4K6nT9B3j1FziYycLO8p3hnAFl5IpohnpRiInt945i-hl2UYBh_s7oENjeaKQ96_NJcrk2h7IVNQhXAlL3Pyt89lrlaBVRJh0pi2Xq1SOyxR0W9gfvvoVGF2LUlwEm34AgMHAUa0OTBB7NEouQbOfvYg-_M700AHgt3U13Jfahqq_kweS55q7CP_MQi5__Ie4yVHYNAqLx693DVcoYDF7EZLd9gO6MryuryBLPviIH80ee948A/file"
+			(at 97.79 32.004 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "SS49E Linear Hall-Effect Sensor"
+			(at 82.042 17.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "1"
+			(uuid "eed5e533-db43-47a3-baf2-fe5628551923")
+		)
+		(pin "2"
+			(uuid "eeb2df39-2e2a-4b90-8a3c-ca6f33c5c218")
+		)
+		(pin "3"
+			(uuid "824a2a6c-4c1b-486d-a83f-e1ff59aacc0f")
+		)
+		(instances
+			(project ""
+				(path "/0412001e-ce1e-4114-8b47-96e686d3050a"
+					(reference "U1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:VCC")
+		(at 90.17 54.61 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a5ffd9c0-6991-48ce-86fc-87385ee8919f")
+		(property "Reference" "#PWR04"
+			(at 90.17 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VCC"
+			(at 90.17 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 90.17 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 90.17 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VCC\""
+			(at 90.17 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a0278293-dc90-47a8-bb8f-2c15ac4e793e")
+		)
+		(instances
+			(project "Logic board magnetic sensor"
+				(path "/0412001e-ce1e-4114-8b47-96e686d3050a"
+					(reference "#PWR04")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Logic Gate Symbols:Linear_Hall_Effect_Sensor")
+		(at 139.7 21.59 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a7930c8c-aff3-42a7-8602-0e887d1a1dc6")
+		(property "Reference" "U3"
+			(at 144.018 21.844 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "~"
+			(at 144.78 21.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Logic Board Footprints:Linear Hall Effect Sensor SS49E"
+			(at 139.7 21.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://uc91381c3f3129ba0fabff32497f.dl.dropboxusercontent.com/cd/0/inline2/Crkrt_J2gHvRIbNUkCCbrtviP03OYfy4hp6psAkjwI3ArpseT23NXvglgOoEGZsEzH91FuRDR7x_WUHC8IvfPOmqYlsIbF3VOsEMD4OB0wtLfV1F7Z-lUu8kXxdE4K6nT9B3j1FziYycLO8p3hnAFl5IpohnpRiInt945i-hl2UYBh_s7oENjeaKQ96_NJcrk2h7IVNQhXAlL3Pyt89lrlaBVRJh0pi2Xq1SOyxR0W9gfvvoVGF2LUlwEm34AgMHAUa0OTBB7NEouQbOfvYg-_M700AHgt3U13Jfahqq_kweS55q7CP_MQi5__Ie4yVHYNAqLx693DVcoYDF7EZLd9gO6MryuryBLPviIH80ee948A/file"
+			(at 139.7 32.004 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "SS49E Linear Hall-Effect Sensor"
+			(at 123.952 17.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "1"
+			(uuid "4739a689-c6f7-4f68-859e-cc64398685bd")
+		)
+		(pin "2"
+			(uuid "fec25e3c-58ed-48cb-a0be-c9c5b3ea8917")
+		)
+		(pin "3"
+			(uuid "fb20780e-523c-4576-b852-086290a77746")
+		)
+		(instances
+			(project "Logic board magnetic sensor"
+				(path "/0412001e-ce1e-4114-8b47-96e686d3050a"
+					(reference "U3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 215.9 88.9 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a875412d-4abf-4916-9149-6483a87e0b91")
+		(property "Reference" "H1"
+			(at 218.44 87.6299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 218.44 90.1699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+			(at 215.9 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 215.9 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 215.9 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project ""
+				(path "/0412001e-ce1e-4114-8b47-96e686d3050a"
+					(reference "H1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Logic Gate Symbols:Linear_Hall_Effect_Sensor")
+		(at 139.7 50.8 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b3b886cc-aff8-480b-9ab9-5ab3fc1bc107")
+		(property "Reference" "U5"
+			(at 144.018 51.054 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "~"
+			(at 144.78 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Logic Board Footprints:Linear Hall Effect Sensor SS49E"
+			(at 139.7 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://uc91381c3f3129ba0fabff32497f.dl.dropboxusercontent.com/cd/0/inline2/Crkrt_J2gHvRIbNUkCCbrtviP03OYfy4hp6psAkjwI3ArpseT23NXvglgOoEGZsEzH91FuRDR7x_WUHC8IvfPOmqYlsIbF3VOsEMD4OB0wtLfV1F7Z-lUu8kXxdE4K6nT9B3j1FziYycLO8p3hnAFl5IpohnpRiInt945i-hl2UYBh_s7oENjeaKQ96_NJcrk2h7IVNQhXAlL3Pyt89lrlaBVRJh0pi2Xq1SOyxR0W9gfvvoVGF2LUlwEm34AgMHAUa0OTBB7NEouQbOfvYg-_M700AHgt3U13Jfahqq_kweS55q7CP_MQi5__Ie4yVHYNAqLx693DVcoYDF7EZLd9gO6MryuryBLPviIH80ee948A/file"
+			(at 139.7 61.214 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "SS49E Linear Hall-Effect Sensor"
+			(at 123.952 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "1"
+			(uuid "ecf469b5-4a4c-4cbb-9fd8-15be8b774d73")
+		)
+		(pin "2"
+			(uuid "7bb9046a-6bbd-46a2-831f-efc5ae3f19f1")
+		)
+		(pin "3"
+			(uuid "fc5b4109-6d29-46db-b7f9-a66c01da04de")
+		)
+		(instances
+			(project "Logic board magnetic sensor"
+				(path "/0412001e-ce1e-4114-8b47-96e686d3050a"
+					(reference "U5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 181.61 59.69 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "bb8baecd-0fa7-4fe5-b1b4-66ce85232d6c")
+		(property "Reference" "#PWR012"
+			(at 181.61 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 181.61 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 181.61 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 181.61 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 181.61 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d336ef95-0614-4319-b0dd-e9f868aaf25c")
+		)
+		(instances
+			(project "Logic board magnetic sensor"
+				(path "/0412001e-ce1e-4114-8b47-96e686d3050a"
+					(reference "#PWR012")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 234.95 88.9 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "bcdbf93d-ee1a-4b77-b8fa-777a43964334")
+		(property "Reference" "H3"
+			(at 237.49 87.6299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 237.49 90.1699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+			(at 234.95 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 234.95 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 234.95 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "Logic board magnetic sensor"
+				(path "/0412001e-ce1e-4114-8b47-96e686d3050a"
+					(reference "H3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 97.79 30.48 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c005698f-ca10-4b40-a1e4-3d390f981e2d")
+		(property "Reference" "#PWR07"
+			(at 97.79 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 97.79 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 97.79 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 97.79 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 97.79 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8144da80-924e-471b-b680-bf806b60d344")
+		)
+		(instances
+			(project ""
+				(path "/0412001e-ce1e-4114-8b47-96e686d3050a"
+					(reference "#PWR07")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 139.7 30.48 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c03205e6-6f90-46b8-bc3b-e78a76d6480f")
+		(property "Reference" "#PWR08"
+			(at 139.7 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 139.7 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 139.7 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 139.7 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 139.7 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3b1fb585-65b3-4e08-8bb7-0634195924f2")
+		)
+		(instances
+			(project "Logic board magnetic sensor"
+				(path "/0412001e-ce1e-4114-8b47-96e686d3050a"
+					(reference "#PWR08")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:VCC")
+		(at 173.99 54.61 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c437d8aa-7a1b-4c19-9362-1be910eceb1e")
+		(property "Reference" "#PWR06"
+			(at 173.99 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VCC"
+			(at 173.99 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 173.99 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 173.99 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VCC\""
+			(at 173.99 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4b86a825-d856-44b3-a542-ea9ab7fd5b85")
+		)
+		(instances
+			(project "Logic board magnetic sensor"
+				(path "/0412001e-ce1e-4114-8b47-96e686d3050a"
+					(reference "#PWR06")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:VCC")
+		(at 93.98 86.36 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ce5b5a89-e064-44e0-8f82-87d269e32358")
+		(property "Reference" "#PWR014"
+			(at 93.98 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VCC"
+			(at 93.98 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 93.98 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 93.98 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VCC\""
+			(at 93.98 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4ce76b16-d266-42c3-9336-4fdddf75ed94")
+		)
+		(instances
+			(project "Logic board magnetic sensor"
+				(path "/0412001e-ce1e-4114-8b47-96e686d3050a"
+					(reference "#PWR014")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 92.71 110.49 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d604bdad-dda3-4a00-8618-f9733b9e492a")
+		(property "Reference" "#PWR015"
+			(at 92.71 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 92.71 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 92.71 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 92.71 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 92.71 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ff650cba-277d-4130-ab00-637dbdb41692")
+		)
+		(instances
+			(project "Logic board magnetic sensor"
+				(path "/0412001e-ce1e-4114-8b47-96e686d3050a"
+					(reference "#PWR015")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Logic Gate Symbols:Linear_Hall_Effect_Sensor")
+		(at 181.61 21.59 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e6869c05-4c39-43d9-83dd-8344d8461ea4")
+		(property "Reference" "U4"
+			(at 185.928 21.844 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "~"
+			(at 186.69 21.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Logic Board Footprints:Linear Hall Effect Sensor SS49E"
+			(at 181.61 21.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://uc91381c3f3129ba0fabff32497f.dl.dropboxusercontent.com/cd/0/inline2/Crkrt_J2gHvRIbNUkCCbrtviP03OYfy4hp6psAkjwI3ArpseT23NXvglgOoEGZsEzH91FuRDR7x_WUHC8IvfPOmqYlsIbF3VOsEMD4OB0wtLfV1F7Z-lUu8kXxdE4K6nT9B3j1FziYycLO8p3hnAFl5IpohnpRiInt945i-hl2UYBh_s7oENjeaKQ96_NJcrk2h7IVNQhXAlL3Pyt89lrlaBVRJh0pi2Xq1SOyxR0W9gfvvoVGF2LUlwEm34AgMHAUa0OTBB7NEouQbOfvYg-_M700AHgt3U13Jfahqq_kweS55q7CP_MQi5__Ie4yVHYNAqLx693DVcoYDF7EZLd9gO6MryuryBLPviIH80ee948A/file"
+			(at 181.61 32.004 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "SS49E Linear Hall-Effect Sensor"
+			(at 165.862 17.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "1"
+			(uuid "535134b2-db80-4cf4-a05f-9bd326cc78db")
+		)
+		(pin "2"
+			(uuid "fe664652-dbc8-4798-8ad7-1a70e4dd9438")
+		)
+		(pin "3"
+			(uuid "8e346194-4a8f-4178-97e5-4be1d0e4ac9e")
+		)
+		(instances
+			(project "Logic board magnetic sensor"
+				(path "/0412001e-ce1e-4114-8b47-96e686d3050a"
+					(reference "U4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:VCC")
+		(at 184.15 144.78 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "eb7edac6-04e8-4954-a494-8839325b3031")
+		(property "Reference" "#PWR018"
+			(at 184.15 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VCC"
+			(at 184.15 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 184.15 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 184.15 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VCC\""
+			(at 184.15 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9e37f719-c038-4611-b630-bdc3bcc0eaca")
+		)
+		(instances
+			(project "Logic board magnetic sensor"
+				(path "/0412001e-ce1e-4114-8b47-96e686d3050a"
+					(reference "#PWR018")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 134.62 139.7 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ee91a450-eed6-40e5-a447-adcb315d2e1e")
+		(property "Reference" "#PWR023"
+			(at 134.62 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 134.62 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 134.62 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 134.62 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 134.62 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f6fff6cc-e5cd-4b1e-b171-083739731f72")
+		)
+		(instances
+			(project "Logic board magnetic sensor"
+				(path "/0412001e-ce1e-4114-8b47-96e686d3050a"
+					(reference "#PWR023")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:VCC")
+		(at 100.33 144.78 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f0af8a06-904f-483d-8ff8-4858748d8c96")
+		(property "Reference" "#PWR026"
+			(at 100.33 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VCC"
+			(at 100.33 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 100.33 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 100.33 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VCC\""
+			(at 100.33 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5b51f110-748c-43e0-87ba-5ed23a46ee52")
+		)
+		(instances
+			(project "Logic board magnetic sensor"
+				(path "/0412001e-ce1e-4114-8b47-96e686d3050a"
+					(reference "#PWR026")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:VCC")
+		(at 132.08 25.4 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f81696a2-dfe0-454e-88ee-a4431e574f46")
+		(property "Reference" "#PWR02"
+			(at 132.08 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VCC"
+			(at 132.08 20.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 132.08 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 132.08 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VCC\""
+			(at 132.08 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f1fa35db-1ec8-40c0-99de-2ed1d776a436")
+		)
+		(instances
+			(project "Logic board magnetic sensor"
+				(path "/0412001e-ce1e-4114-8b47-96e686d3050a"
+					(reference "#PWR02")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)
