@@ -1,0 +1,29 @@
+Logic puzzle addresses:
+
+0 is south pole, 1 is north pole
+Every puzzle piece will have all 3 magnets populated
+Any spot where there is no magnet detected will be assumed to be an open/float
+
+Single width pieces:
+000: NOT gate
+001: straight wire
+010 - 101: reserved for future ideas
+110: double wide wire
+111: double wide gate
+
+Double wide wire second leg:
+000: two crossing wires
+001: splitter, bottom input
+010: splitter, top input
+011 - 111: reserved for future ideas
+
+Double wide gate second leg:
+000: AND gate
+001: OR gate
+010: NAND gate
+011: NOR gate
+100: XOR gate
+101: NXOR gate
+110: SR latch
+111: reserved for a future idea
+
