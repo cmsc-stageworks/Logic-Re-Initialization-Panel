@@ -9,4 +9,4 @@ This panel teaches basic boolean logic (not, and, or) to children, or can be con
 ### Initial Concept
 ![Initial Concept](InitialConcept.jpg)
 ### Magnet Codes:
-![Puzzle Codes: logic_puzzle_addresses.txt](logic_puzzle_addresses.txt)
+![logic_puzzle_addresses.txt](logic_puzzle_addresses.txt)
