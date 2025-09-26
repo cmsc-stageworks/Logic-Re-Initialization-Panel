@@ -1,4 +1,4 @@
-## Logic Initialization Panel
+# Logic Initialization Panel
 
 Created by the BYU IEEE Branch for the CMSC
 
@@ -6,4 +6,4 @@ The idea is that you take an isolinear chip that is "broken" and you place it in
 
 This panel teaches basic boolean logic (not, and, or) to children, or can be configured to challenge adults with more gates/configurations
 
-![Initial Concept](Initial Concept.jpg)
+![Initial Concept](InitialConcept.jpg)
