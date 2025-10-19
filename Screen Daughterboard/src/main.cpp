@@ -9,6 +9,7 @@
 #define MISO1 0
 #define MOSI1 3
 #define SCK1 2
+#define SPI1_CS 7
 
 #define SPI_FREQUENCIES (80 * 1000 * 1000)
 #define RX_BUFFER_SIZE 256
@@ -24,7 +25,8 @@ void setup() {
   SPI1.setRX(MISO);
   SPI1.setTX(MOSI);
   SPI1.setSCK(SCK);
-  SPI1.begin();
+  SPI1.setCS(SPI1_CS);
+  SPI1.begin(true);
   
 }
 
