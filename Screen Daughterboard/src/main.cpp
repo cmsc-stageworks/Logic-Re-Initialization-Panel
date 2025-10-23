@@ -2,19 +2,18 @@
 #include <SPI.h>
 #include <SPISlave.h>
 
-#define MISO 15
-#define MOSI 12
+#define MISO 12
+#define MOSI 15
 #define SCK 14
 #define MASTER_CS 13
-#define MISO1 0
-#define MOSI1 3
+#define MISO1 3
+#define MOSI1 0
 #define SCK1 2
-#define SPI1_CS 7
+#define SPI_SLAVE_CS 5
 
 #define SPI_FREQUENCIES (80 * 1000 * 1000)
 #define RX_BUFFER_SIZE 256
 #define TX_BUFFER_SIZE 256
-
 
 char msg[RX_BUFFER_SIZE];
 char backtalk[TX_BUFFER_SIZE];
@@ -22,11 +21,14 @@ char backtalk[TX_BUFFER_SIZE];
 SPISettings spisettings(SPI_FREQUENCIES, MSBFIRST, SPI_MODE0);
 
 void setup() {
+  delay(4000);
   SPI1.setRX(MISO);
   SPI1.setTX(MOSI);
   SPI1.setSCK(SCK);
-  SPI1.setCS(SPI1_CS);
+  SPI1.setCS(MASTER_CS);
   SPI1.begin(true);
+
+  Serial.println("Master Started");
   
 }
 
@@ -34,6 +36,7 @@ void loop() {
   delay(5000);
   SPI1.beginTransaction(spisettings);
   sprintf(msg, "Current Millis: %ld\r\n", millis());
+  Serial.print(msg);
   SPI.transferAsync(msg, backtalk, sizeof(msg));
   SPI1.endTransaction();
 }
@@ -48,6 +51,7 @@ void recvCallback(uint8_t *data, size_t len){
   for(int i = 0; i < len; i++){
     rxBuffer[i] = data[i];
   }
+  Serial.println("received SPI from Master");
   newDataReceived = true;
 }
 
@@ -59,14 +63,25 @@ void sentCallback(){
 
 
 void setup1() {
-  SPISlave.setRX(MISO1);
-  SPISlave.setTX(MOSI1);
+
+  SPISlave.setRX(MOSI1);
+  Serial.println("RX");
+  SPISlave.setTX(MISO1);
+  Serial.println("TX");
+  SPISlave.setCS(SPI_SLAVE_CS);
+  Serial.println("CS");
   SPISlave.setSCK(SCK1);
-  SPISlave.setCS(MASTER_CS);
+  Serial.println("Set Pins");
+
+  sentCallback();
+  Serial.println("Called Back");
+
   SPISlave.onDataRecv(recvCallback);
   SPISlave.onDataSent(sentCallback);
+  Serial.println("Assigned callbacks");
   SPISlave.begin(spisettings);
-  
+
+
   delay(3000);
   Serial.println("S-INFO: SPISlave started");
 }
