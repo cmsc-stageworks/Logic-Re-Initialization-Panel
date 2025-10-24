@@ -3614,7 +3614,7 @@
 			)
 		)
 	)
-	(global_label "SPI 0 nSS"
+	(global_label "SPI 1 nSS"
 		(shape output)
 		(at 64.77 157.48 0)
 		(fields_autoplaced yes)
@@ -3636,7 +3636,7 @@
 			)
 		)
 	)
-	(global_label "SPI 0 SCK"
+	(global_label "SPI 1 SCK"
 		(shape input)
 		(at 52.07 90.17 180)
 		(fields_autoplaced yes)
@@ -3658,7 +3658,7 @@
 			)
 		)
 	)
-	(global_label "SPI 0 SCK"
+	(global_label "SPI 1 SCK"
 		(shape output)
 		(at 64.77 167.64 0)
 		(fields_autoplaced yes)
@@ -3702,7 +3702,7 @@
 			)
 		)
 	)
-	(global_label "SPI 0 MISO"
+	(global_label "SPI 1 MISO"
 		(shape output)
 		(at 64.77 172.72 0)
 		(fields_autoplaced yes)
@@ -3768,7 +3768,7 @@
 			)
 		)
 	)
-	(global_label "SPI 1 MISO"
+	(global_label "SPI 0 MISO"
 		(shape output)
 		(at 219.71 133.35 0)
 		(fields_autoplaced yes)
@@ -3790,7 +3790,7 @@
 			)
 		)
 	)
-	(global_label "SPI 1 SS SD"
+	(global_label "SPI 0 SS SD"
 		(shape output)
 		(at 106.68 87.63 0)
 		(fields_autoplaced yes)
@@ -3812,7 +3812,7 @@
 			)
 		)
 	)
-	(global_label "SPI 1 SS SCREEN"
+	(global_label "SPI 0 SS SCREEN"
 		(shape output)
 		(at 52.07 69.85 180)
 		(fields_autoplaced yes)
@@ -3856,7 +3856,7 @@
 			)
 		)
 	)
-	(global_label "SPI 0 MISO"
+	(global_label "SPI 1 MISO"
 		(shape output)
 		(at 52.07 92.71 180)
 		(fields_autoplaced yes)
@@ -3878,7 +3878,7 @@
 			)
 		)
 	)
-	(global_label "SPI 1 MISO"
+	(global_label "SPI 0 MISO"
 		(shape output)
 		(at 187.96 130.81 180)
 		(fields_autoplaced yes)
@@ -3922,7 +3922,7 @@
 			)
 		)
 	)
-	(global_label "SPI 0 nSS"
+	(global_label "SPI 1 nSS"
 		(shape input)
 		(at 52.07 87.63 180)
 		(fields_autoplaced yes)
@@ -3944,7 +3944,7 @@
 			)
 		)
 	)
-	(global_label "SPI 1 MOSI"
+	(global_label "SPI 0 MOSI"
 		(shape input)
 		(at 187.96 128.27 180)
 		(fields_autoplaced yes)
@@ -4010,7 +4010,7 @@
 			)
 		)
 	)
-	(global_label "SPI 1 MISO"
+	(global_label "SPI 0 MISO"
 		(shape input)
 		(at 52.07 54.61 180)
 		(fields_autoplaced yes)
@@ -4032,7 +4032,7 @@
 			)
 		)
 	)
-	(global_label "SPI 1 MOSI"
+	(global_label "SPI 0 MOSI"
 		(shape input)
 		(at 219.71 125.73 0)
 		(fields_autoplaced yes)
@@ -4076,7 +4076,7 @@
 			)
 		)
 	)
-	(global_label "SPI 1 SS SD"
+	(global_label "SPI 0 SS SD"
 		(shape input)
 		(at 187.96 125.73 180)
 		(fields_autoplaced yes)
@@ -4120,7 +4120,7 @@
 			)
 		)
 	)
-	(global_label "SPI 0 MOSI"
+	(global_label "SPI 1 MOSI"
 		(shape input)
 		(at 52.07 85.09 180)
 		(fields_autoplaced yes)
@@ -4186,7 +4186,7 @@
 			)
 		)
 	)
-	(global_label "SPI 1 SCK"
+	(global_label "SPI 0 SCK"
 		(shape input)
 		(at 219.71 128.27 0)
 		(fields_autoplaced yes)
@@ -4230,7 +4230,7 @@
 			)
 		)
 	)
-	(global_label "SPI 0 MOSI"
+	(global_label "SPI 1 MOSI"
 		(shape output)
 		(at 64.77 165.1 0)
 		(fields_autoplaced yes)
@@ -4296,7 +4296,7 @@
 			)
 		)
 	)
-	(global_label "SPI 1 SCK"
+	(global_label "SPI 0 SCK"
 		(shape output)
 		(at 52.07 59.69 180)
 		(fields_autoplaced yes)
@@ -4340,7 +4340,7 @@
 			)
 		)
 	)
-	(global_label "SPI 1 SCK"
+	(global_label "SPI 0 SCK"
 		(shape input)
 		(at 187.96 133.35 180)
 		(fields_autoplaced yes)
@@ -4362,7 +4362,7 @@
 			)
 		)
 	)
-	(global_label "SPI 1 MOSI"
+	(global_label "SPI 0 MOSI"
 		(shape output)
 		(at 52.07 62.23 180)
 		(fields_autoplaced yes)
@@ -4384,7 +4384,7 @@
 			)
 		)
 	)
-	(global_label "SPI 1 SS SCREEN"
+	(global_label "SPI 0 SS SCREEN"
 		(shape input)
 		(at 219.71 118.11 0)
 		(fields_autoplaced yes)
