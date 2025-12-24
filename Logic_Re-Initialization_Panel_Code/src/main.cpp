@@ -35,8 +35,11 @@ void loop() {
   static uint16_t parsed_W, parsed_H;
   static LOGIC_CARD* readValues = getParsedGates(&parsed_W, &parsed_H);
 
+  Serial.println("Current Gate status:");
   for(int h = 0; h < 4; h++){
-    Serial.printf("Gate #%d: %x", h, readValues[h]);
+    for(int w = 0; w < 4; w++){
+      Serial.printf("%02x ", readValues[h + w * parsed_W]);
+    }
     Serial.println();
   }
   
