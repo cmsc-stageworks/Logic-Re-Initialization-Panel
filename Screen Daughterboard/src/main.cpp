@@ -1,6 +1,7 @@
 #include <Arduino.h>
 #include <SPI.h>
 #include <SPISlave.h>
+#include <spiCommands.h>
 
 // spi 0 is master, spi 1 is slave
 #define MISO 15
@@ -36,9 +37,17 @@ void setup() {
 void loop() {
   delay(5000);
   SPI.beginTransaction(spisettings);
-  sprintf(msg, "Current Millis: %ld\r\n", millis());
-  Serial.print(msg);
-  SPI.transferAsync(msg, backtalk, sizeof(msg));
+  sprintf(msg + 1, "Current Millis: %ld\r\n", millis());
+  Serial.print("Transmitting: ");
+  Serial.print(msg + 1);
+  // msg[0] = SEND_STRING;
+  // msg[1] = strlen(msg + 1);
+  msg[0] = 255;
+  Serial.printf("Length of transmission: %d\n", strlen(msg + 1) + 1);
+  SPI.transferAsync(msg, backtalk, 256);
+  // msg[0] = FINISH_STRING;
+  // SPI.transferAsync(msg, backtalk, 1);
+  while (!SPI.finishedAsync());
   SPI.endTransaction();
 }
 
@@ -47,13 +56,15 @@ void loop() {
 
 
 volatile bool newDataReceived = false;
-int8_t rxBuffer[RX_BUFFER_SIZE];
+int8_t rxBuffer[32];
+int recvIdx = 0;
 void recvCallback(uint8_t *data, size_t len){
-  for(int i = 0; i < len; i++){
-    rxBuffer[i] = data[i];
+  memcpy(rxBuffer + recvIdx, data, len);
+  recvIdx += len;
+  if (recvIdx >= sizeof(rxBuffer)) {
+    newDataReceived = true;
+    recvIdx = 0;
   }
-  Serial.println("received SPI from Master");
-  newDataReceived = true;
 }
 
 int8_t txBuffer[TX_BUFFER_SIZE];
@@ -75,6 +86,7 @@ void setup1() {
   Serial.println("Set Pins");
 
   sentCallback();
+  recvCallback(0,0);
   Serial.println("Called Back");
 
   SPISlave1.onDataRecv(recvCallback);
@@ -89,7 +101,7 @@ void setup1() {
 
 void loop1() {
   if(newDataReceived){
-    Serial.print("Master Sent:");
+    Serial.print("Master Sent: ");
     Serial.println((char*) rxBuffer);
     newDataReceived = false;
   }
