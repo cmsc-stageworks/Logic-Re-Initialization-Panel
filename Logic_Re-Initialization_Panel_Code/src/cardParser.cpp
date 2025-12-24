@@ -81,7 +81,7 @@ static LOGIC_CARD sensorReadingsToGate(int32_t* sensors){
 }
 
 static LOGIC_CARD* parsePort(uint8_t portNum){
-    static LOGIC_CARD result[4];
+    static LOGIC_CARD result[4]; // static so it persists across calls without the need for malloc and free
     for(int gateSlot = 0; gateSlot < 4; gateSlot++) {
         static int32_t sensorLine[3];
         for(int sensor = 0; sensor < 3; sensor++){
@@ -90,11 +90,15 @@ static LOGIC_CARD* parsePort(uint8_t portNum){
         }
         result[gateSlot] = sensorReadingsToGate(sensorLine);
     }
+    return result;
 }
 
 static void updateAndParseLogicCards(){
     for(uint16_t port = 0; port < numPortsToRead; port++){
         LOGIC_CARD* portResult = parsePort(portsToRead[port]);
+        for(int i = 0; i < 4; i++){
+            cards[port * 4 + i] = portResult[i];
+        }
     }
 }
 
@@ -109,4 +113,8 @@ void tickParseLogicCards(){
     }
 }
 
-LOGIC_CARD* getParsedGates(uint16_t* W, uint16_t* H);
+LOGIC_CARD* getParsedGates(uint16_t* W, uint16_t* H){
+    *W = W_ports;
+    *H = H_ports;
+    return cards;
+}

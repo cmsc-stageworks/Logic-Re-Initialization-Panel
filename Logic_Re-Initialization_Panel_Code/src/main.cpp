@@ -32,18 +32,14 @@ void setup() {
 void loop() {
   tickParseLogicCards();
 
+  static uint16_t parsed_W, parsed_H;
+  static LOGIC_CARD* readValues = getParsedGates(&parsed_W, &parsed_H);
 
-  // old code for checking the sensors manually
-  // for(int hall_sensor = 0; hall_sensor < 3/*LOGIC_GATES_H * LOGIC_GATES_W * LOGIC_GATES_SENSORS_PER_GATE*/; hall_sensor++){
-  //   if(hall_sensor % 3 == 0){
-  //     Serial.println();
-  //     Serial.printf("Sensor %d: ", hall_sensor / 3 + 1);
-  //   }
-  //   Serial.print(mainBoardGetAnalogMux(pinDemux[0][hall_sensor]));
-  //   if(hall_sensor % 3 != 2){
-  //     Serial.print(',');
-  //   }
-  // }
+  for(int h = 0; h < 4; h++){
+    Serial.printf("Gate #%d: %x", h, readValues[h]);
+    Serial.println();
+  }
+  
   delay(500);
 }
 
