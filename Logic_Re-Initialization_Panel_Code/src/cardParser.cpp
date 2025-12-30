@@ -65,7 +65,7 @@ void setupParseLogicCards(uint16_t W, uint16_t H, const uint8_t* ports, uint8_t 
 }
 
 static LOGIC_CARD sensorReadingsToGate(int32_t* sensors){
-    LOGIC_CARD result = (LOGIC_CARD) 0x80; // assume it is populated
+    LOGIC_CARD result = (LOGIC_CARD) 0x08; // assume it is populated
     for(int sensor = 0; sensor < LOGIC_GATES_SENSORS_PER_GATE; sensor++){
         if(sensors[sensor] >= calibVal + LOGIC_GATES_HALL_SENSOR_THRESHOLD){
             result = (LOGIC_CARD) (result | (0x1 << sensor));
@@ -117,4 +117,11 @@ LOGIC_CARD* getParsedGates(uint16_t* W, uint16_t* H){
     *W = W_ports;
     *H = H_ports;
     return cards;
+}
+
+LOGIC_CARD getGate(uint16_t index){
+    if(index > W_ports * H_ports){
+        return POPULATED_READ_ERROR_GATE;
+    }
+    return cards[index];
 }

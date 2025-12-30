@@ -4,97 +4,29 @@
 #include <stdint.h>
 #include <stdlib.h>
 #include <assert.h>
-
-typedef uint8_t bool8;
-
-// This defines what size number holds the blocks and wire states.
-typedef uint8_t block_t;
-typedef uint8_t wire_t;
-
-#define ROWS 4
-#define COLS 4
-#define SENSORS_PER_BLOCK 4
+#include "logic_board.h"
+#include "cardParser.h"
 
 
-struct sensors_stuff {
-    // STUFF
-};
-
-
-block_t
-readSensorNibble(sensors_stuff *s, int sensorNum) {
-    // IMPLEMENT THIS
+static block_t
+readSensorNibble(int sensorNum) {
+    return getGate(sensorNum);
 }
-
-
-
-
-
-#define DW(first, second) (((second) << 4) | (first))
-// This defines the bit that marks a double-wide gate.
-#define DW_BIT 0b0100
-
-enum logic_block_type : block_t {
-    // Single-width stuffs
-    EMPTY = 0,
-    NOT = 0b1000,
-    STRAIGHT_WIRE = 0b1001,
-    // Bit 0b0100 being set defines a double-wide gate.
-    // The available double-wide gates 0b1100 and 0b1101
-    DOUBLE_WIDE_WIRE = 0b1110,
-    DOUBLE_WIDE_GATE = 0b1111,
-    
-    // Double-wide wires
-    SWAPPER = DW(DOUBLE_WIDE_WIRE, 0b1000),
-    SPLITTER_BOTTOM = DW(DOUBLE_WIDE_WIRE, 0b1001), 
-    SPLITTER_TOP = DW(DOUBLE_WIDE_WIRE, 0b1010),
-    
-    
-    // Double-wide gates
-    AND = DW(DOUBLE_WIDE_GATE, 0b1000),
-    OR = DW(DOUBLE_WIDE_GATE, 0b1001),
-    NAND = DW(DOUBLE_WIDE_GATE, 0b1010),
-    NOR = DW(DOUBLE_WIDE_GATE, 0b1011),
-    XOR = DW(DOUBLE_WIDE_GATE, 0b1100),
-    XNOR = DW(DOUBLE_WIDE_GATE, 0b1101),
-    
-};
-
-// TODO: Logic code will become much simpler if FALSE = 0 and TRUE = 1
-//       Then you can use use normal boolean logic.
-//       This should be possible, since there aren't any flag-like logic with them right now.
-//       One problem this might cause is that it wouldn't be as easy to identify undefined things.
-enum wire_state : wire_t {
-    NOTHING = 0x1,
-    FALSE = 0x2,
-    TRUE = 0x4,
-    UNDEFINED = 0x8,
-    ERROR = 0x10,
-    UNFILLED_INPUT = 0x20,
-};
-
-struct logic_grid {
-    logic_block_type blocks[COLS][ROWS];
-};
-
-struct logic_grid_wires {
-    wire_state wires[COLS+1][ROWS];
-};
 
 
 
 // TODO: Change to accept array of analog pin numbers?
 void
-readLogicGrid(sensors_stuff *sensors, logic_grid *output) {
+readLogicGrid(logic_grid *output) {
     int sensorIndex = 0;
-    for (int col = 0; col < COLS; col++) {
-        for (int row = 0; row < ROWS; row++) {
-            block_t blockNum = readSensorNibble(sensors, sensorIndex++);
+    for (int col = 0; col < LOGIC_BOARD_COLS; col++) {
+        for (int row = 0; row < LOGIC_BOARD_ROWS; row++) {
+            block_t blockNum = readSensorNibble(sensorIndex++);
             
             // If it's a double-wide
             if (blockNum & DW_BIT) {
                 blockNum <<= 4;
-                blockNum |= readSensorNibble(sensors, sensorIndex++);
+                blockNum |= readSensorNibble(sensorIndex++);
                 
                 output->blocks[col][row] = (logic_block_type) blockNum;
                 output->blocks[col][row+1] = EMPTY;
@@ -119,11 +51,11 @@ readLogicGrid(sensors_stuff *sensors, logic_grid *output) {
 // #define IS_UNDEFINED(x) ((x) & UNDEFINED_MASK)
 // #define ANY_UNDEFINED(x,y) (((x)|(y)) & UNDEFINED_MASK)
 
-bool8 isUndefined(wire_state state) {
+static bool8 isUndefined(wire_state state) {
     return state & UNDEFINED_MASK;
 }
 
-bool8 eitherUndefined(wire_state a, wire_state b) {
+static bool8 eitherUndefined(wire_state a, wire_state b) {
     return (a | b) & UNDEFINED_MASK;
 }
 
@@ -133,7 +65,7 @@ populateLogicGridWireState(logic_grid *gridSetup, logic_grid_wires *gridWireStat
     wire_state *inputs = &gridWireState->wires[0][0];
     wire_state *outputs = &gridWireState->wires[1][0];
     
-    for (int i = 0; i < COLS*ROWS;) {
+    for (int i = 0; i < LOGIC_BOARD_COLS*LOGIC_BOARD_ROWS;) {
         int slots;
         // TODO: Check validity of inputs.
         // TODO: Check validity of state every loop, for debugging purporses.
