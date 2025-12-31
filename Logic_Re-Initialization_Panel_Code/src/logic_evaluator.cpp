@@ -4,7 +4,7 @@
 #include <stdint.h>
 #include <stdlib.h>
 #include <assert.h>
-#include "logic_board.h"
+#include "logic_evaluator.h"
 #include "cardParser.h"
 
 
@@ -15,7 +15,6 @@ readSensorNibble(int sensorNum) {
 
 
 
-// TODO: Change to accept array of analog pin numbers?
 void
 readLogicGrid(logic_grid *output) {
     int sensorIndex = 0;

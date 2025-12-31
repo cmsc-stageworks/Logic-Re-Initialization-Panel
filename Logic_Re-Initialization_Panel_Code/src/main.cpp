@@ -1,6 +1,9 @@
+#define DEBUG_NFC_ISO_CARDS true
+
 #include <Adafruit_NeoPixel.h>
 #include <ESP32Servo.h>
 #include <MainBoard.h>
+#include <isoCards.h>
 #include <Adafruit_ILI9341.h>
 #include <Wire.h>
 #include <Ethernet3.h>
