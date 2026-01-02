@@ -12,7 +12,7 @@ SPIClass mainBoardSpi = SPIClass(HSPI);
 
 HardwareSerial MainBoardSerialAlt(1);
 
-SdFs mainBoardSD;
+SdFat mainBoardSD;
 
 static TCA9535* IO_Expanders[NUM_DIGITAL_IO_EXPANDERS];
 
