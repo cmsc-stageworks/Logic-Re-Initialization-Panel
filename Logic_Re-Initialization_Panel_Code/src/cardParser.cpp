@@ -85,7 +85,7 @@ static LOGIC_CARD* parsePort(uint8_t portNum){
     for(int gateSlot = 0; gateSlot < 4; gateSlot++) {
         static int32_t sensorLine[3];
         for(int sensor = 0; sensor < 3; sensor++){
-            sensorLine[sensor] = mainBoardGetAnalogMux(portToPinDemux[gateSlot][sensor] + 
+            sensorLine[sensor] = mainBoardGetAnalogMux(portToPinDemux[gateSlot][2 - sensor] + 
                 (portNum - MAIN_BOARD_ANALOG_PORT_1) * MAIN_BOARD_ANALOG_PINS_PER_PORT);
         }
         result[gateSlot] = sensorReadingsToGate(sensorLine);

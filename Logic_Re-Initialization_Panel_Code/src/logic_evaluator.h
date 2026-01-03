@@ -10,7 +10,7 @@
 #define LOGIC_BOARD_COLS 4
 #define LOGIC_BOARD_SENSORS_PER_BLOCK 4
 
-#define DW(first, second) (((second) << 4) | (first))
+#define DW(first, second) (((first) << 4) | (second))
 // This defines the bit that marks a double-wide gate.
 #define DW_BIT 0b0100
 

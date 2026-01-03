@@ -70,13 +70,16 @@ void showScreenDebug(LOGIC_CARD* readValues,uint16_t parsed_W,uint16_t parsed_H,
   for(int row = 0; row < 4; row++){
     for(int col = 0; col < 4; col++){
       LOGIC_CARD currCard = readValues[col * 4 + row];
-      bool populated = currCard & 0x08 != 0;
+      bool populated = (currCard & 0x08) != 0;
+      if(populated){
+        Serial.printf("Row: %d Col: %d populated with value: %d\n", row, col, currCard);
+      }
       display2.drawChar(((LCD_H-1) * (col * 4 + 1))/16 + LCD_W/2 - LCD_H/2, ((LCD_H-1) * (row * 2 + 1))/8, 
-        (populated ? (currCard & 0x01) ? '1' : '0' : ' '), ILI9341_WHITE, ILI9341_BLACK, 1);
+        (populated ? ((currCard & 0x04) != 0) ? '1' : '0' : ' '), ILI9341_WHITE, ILI9341_BLACK, 1);
       display2.drawChar(((LCD_H-1) * (col * 4 + 2))/16 + LCD_W/2 - LCD_H/2, ((LCD_H-1) * (row * 2 + 1))/8, 
-        (populated ? (currCard & 0x02) ? '1' : '0' : ' '), ILI9341_WHITE, ILI9341_BLACK, 1);
+        (populated ? ((currCard & 0x02) != 0) ? '1' : '0' : ' '), ILI9341_WHITE, ILI9341_BLACK, 1);
       display2.drawChar(((LCD_H-1) * (col * 4 + 3))/16 + LCD_W/2 - LCD_H/2, ((LCD_H-1) * (row * 2 + 1))/8, 
-        (populated ? (currCard & 0x04) ? '1' : '0' : ' '), ILI9341_WHITE, ILI9341_BLACK, 1);
+        (populated ? ((currCard & 0x01) != 0) ? '1' : '0' : ' '), ILI9341_WHITE, ILI9341_BLACK, 1);
       int16_t rectX1 = ((LCD_H-1) * (col * 4))/16 + LCD_W/2 - LCD_H/2 + 4;
       int16_t rectY1 = ((LCD_H-1) * (row * 2 + 1))/8;
       display2.fillRect(rectX1, rectY1, 10, 10, getLogicColor(logic->wires[col][row]));
@@ -174,6 +177,17 @@ void loop() {
 
   readLogicGrid(&grid);
   populateLogicGridWireState(&grid,&gridWires);
+
+  Serial.println("Grid State:");
+  for(int h = 0; h < 4; h++){
+    for(int w = 0; w < 4; w++){
+      Serial.printf("%02x ", grid.blocks[w][h]);
+      // Serial.print(grid.blocks[h][w],BIN);
+      // Serial.print(' ');
+    }
+    Serial.println();
+  }
+  Serial.println();
 
   logicTest += 16;
   delay(500);
