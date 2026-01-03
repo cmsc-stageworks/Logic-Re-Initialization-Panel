@@ -27,3 +27,5 @@ Will be cut down, since this was originally started as a whole panel idea and wa
 ![Initial Concept](/Images/InitialConcept.jpg)
 ### Magnet Codes:
 [logic_puzzle_addresses.txt](logic_puzzle_addresses.txt)
+### File system
+[Proposed File System](FileSystem.md)
