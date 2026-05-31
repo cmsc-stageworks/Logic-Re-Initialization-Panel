@@ -7,6 +7,8 @@ static const uint8_t portsUsedForGates[LOGIC_GATES_PORTS_USED] = {MAIN_BOARD_ANA
 static Adafruit_NeoPixel* stripToUse;
 static uint16_t pixelOffset;
 static Adafruit_ST7796S* logicScreen;
+extern SdFat mainBoardSD;
+Adafruit_ImageReader imgReader(mainBoardSD);
 
 static uint8_t logicTest = 0;
 
@@ -66,14 +68,15 @@ void tickPuzzleManager(){
         Serial.println();
     }
     #endif
-
-    if(isDemoMode){
-        gridWires.wires[0][0] = ((logicTest & 0b00010000) != 0) ? TRUE : FALSE;
-        gridWires.wires[0][1] = ((logicTest & 0b00100000) != 0) ? TRUE : FALSE;
-        gridWires.wires[0][2] = ((logicTest & 0b01000000) != 0) ? TRUE : FALSE;
-        gridWires.wires[0][3] = ((logicTest & 0b10000000) != 0) ? TRUE : FALSE;
-        logicTest += 16;
-    } else {
+    #if DEBUG_COUNT_LOGIC_INPUTS
+    gridWires.wires[0][0] = ((logicTest & 0b00010000) != 0) ? TRUE : FALSE;
+    gridWires.wires[0][1] = ((logicTest & 0b00100000) != 0) ? TRUE : FALSE;
+    gridWires.wires[0][2] = ((logicTest & 0b01000000) != 0) ? TRUE : FALSE;
+    gridWires.wires[0][3] = ((logicTest & 0b10000000) != 0) ? TRUE : FALSE;
+    logicTest += 16;
+    #else
+    #endif
+    if(!isDemoMode) {
       static bool cardInsertedLastTime = false;
       tickISOCards();
       ISO_CARD readCard = getISOCardBySlotID(LOGIC_GATE_SLOT_NUMBER);
@@ -88,6 +91,30 @@ void tickPuzzleManager(){
           memcpy(puzzleName, readCard.payload, readCard.payloadLen);
           Serial.print("New Puzzle to load, Card Name: ");
           Serial.println(puzzleName);
+          String filePath = String(PUZZLE_PATH) + String(puzzleName);
+          if(mainBoardSD.exists(filePath)){
+            Serial.println("Found Puzzle Folder Locally!");
+            Adafruit_Image image;
+            String promptPath = filePath + "/" + String(PUZZLE_PROMPT_FILENAME);
+            ImageReturnCode retVal = imgReader.loadBMP(promptPath.c_str(), image);
+            if(retVal == IMAGE_SUCCESS){
+              image.draw(*logicScreen, 0, 0);
+            } else {
+              Serial.println("Error Printing Image!");
+            }
+          } else{
+            Serial.println("Puzzle folder could not be found!");
+          }
+        }
+      } else {
+        if(cardInsertedLastTime){
+          Adafruit_Image image;
+          ImageReturnCode retVal = imgReader.loadBMP(LOGIC_BOARD_LOGO_PATH, image);
+          if(retVal == IMAGE_SUCCESS){
+            image.draw(*logicScreen, 0, 0);
+          } else {
+            Serial.println("Error Printing Logo!");
+          }
         }
       }
       cardInsertedLastTime = readCard.isPopulated;

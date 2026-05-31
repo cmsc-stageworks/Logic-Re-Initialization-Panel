@@ -22,6 +22,12 @@
 
 #define TEST_WRITE_TO_CARD false
 #define TEST_WRITE_TO_CARD_NAME "MISSING-NO"
+/*
+Curr Test Cards:
+  - TEMP_CONTROL
+  - AIR_SCRUBBERS
+
+*/
 
 #define LED_COUNT 20
 
@@ -91,7 +97,7 @@ void setup() {
   }
   Serial.printf("Buffer image load time: %d\nBuffer image load + write time: %d\n", loadTime, millis() - startFill);
   startFill = millis();
-  Serial.printf("Image Print Returned: %d\n", reader.drawBMP("/Pictures/spaceship.bmp", display2, 0, 0, true));
+  Serial.printf("Image Print Returned: %d\n", reader.drawBMP(LOGIC_BOARD_LOGO_PATH, display2, 0, 0, true));
   Serial.printf("Direct image write time: %d\n", millis() - startFill);
   delay(1000);
 

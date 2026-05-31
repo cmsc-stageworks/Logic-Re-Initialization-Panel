@@ -8,16 +8,19 @@
 #include <Adafruit_GFX.h>
 #include <Adafruit_ST7796S.h>
 #include <Adafruit_ILI9341.h>
+#include <Adafruit_ImageReader.h>
+#include <Adafruit_NeoPixel.h>
+#include "globalFlags.h"
 #include <string.h>
 #include "logic_evaluator.h"
-#include "Adafruit_NeoPixel.h"
 #include "logic_wire_lights.h"
 #include "cardParser.h"
 
 #define DEBUG_PUZZLE_MANAGER true
 #define DEBUG_SHOW_GATE_STATUS false
+#define DEBUG_COUNT_LOGIC_INPUTS true
 
-#define PUZZLE_PATH "puzzles/"
+#define PUZZLE_PATH "/Puzzles/"
 #define PUZZLE_SOLUTION_FILENAME "sol.txt"
 #define PUZZLE_PROMPT_FILENAME "prompt.bmp"
 #define PUZZLE_SUCCESS_FILENAME "success.bmp"
