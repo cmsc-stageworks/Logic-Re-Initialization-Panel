@@ -1,0 +1,50 @@
+
+
+   ---- Transcoding 'C:\Users\swimn\AppData\Local\Temp\PentaLogix\ImportZip\cd4ad1d6-2cfa-49d5-bedc-17cfcb6de3c1\Illuminated Button JST Adapter-F_Mask.gbr' ----   Mon May 18 17:09:53 2026
+
+D10   --> D100
+D11   --> D101
+D12   --> D102
+D13   --> D103
+-----------------------------------------------------------------
+
+
+   ---- Transcoding 'C:\Users\swimn\AppData\Local\Temp\PentaLogix\ImportZip\cd4ad1d6-2cfa-49d5-bedc-17cfcb6de3c1\Illuminated Button JST Adapter-F_Cu.gbr' ----   Mon May 18 17:09:53 2026
+
+D10   --> D104
+D11   --> D105
+D12   --> D106
+D13   --> D107
+D14   --> D108
+-----------------------------------------------------------------
+
+
+   ---- Transcoding 'C:\Users\swimn\AppData\Local\Temp\PentaLogix\ImportZip\cd4ad1d6-2cfa-49d5-bedc-17cfcb6de3c1\Illuminated Button JST Adapter-B_Cu.gbr' ----   Mon May 18 17:09:53 2026
+
+D10   --> D109
+D11   --> D110
+D12   --> D111
+D13   --> D112
+D14   --> D113
+-----------------------------------------------------------------
+
+
+   ---- Transcoding 'C:\Users\swimn\AppData\Local\Temp\PentaLogix\ImportZip\cd4ad1d6-2cfa-49d5-bedc-17cfcb6de3c1\Illuminated Button JST Adapter-B_Mask.gbr' ----   Mon May 18 17:09:53 2026
+
+D10   --> D114
+D11   --> D115
+D12   --> D116
+D13   --> D117
+-----------------------------------------------------------------
+
+
+   ---- Transcoding 'C:\Users\swimn\AppData\Local\Temp\PentaLogix\ImportZip\cd4ad1d6-2cfa-49d5-bedc-17cfcb6de3c1\Illuminated Button JST Adapter-B_Silkscreen.gbr' ----   Mon May 18 17:09:53 2026
+
+D10   --> D118
+-----------------------------------------------------------------
+
+
+   ---- Transcoding 'C:\Users\swimn\AppData\Local\Temp\PentaLogix\ImportZip\cd4ad1d6-2cfa-49d5-bedc-17cfcb6de3c1\Illuminated Button JST Adapter-Edge_Cuts.gbr' ----   Mon May 18 17:09:53 2026
+
+D10   --> D119
+-----------------------------------------------------------------

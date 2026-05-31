@@ -5,15 +5,22 @@
 
 #include <String>
 
-#define ISO_CARD_MAX_PAYLOAD_LEN 19
-#define ISO_CARD_MAX_UUID_LEN 10
+//max payload length must be divisible by NTAG2XX_BYTES_PER_PAGE with no remainder
+#define ISO_CARD_MAX_PAYLOAD_LEN 32
+#define ISO_CARD_TIMEOUT_LEN_MS 50
+#define NTAG2XX_VALID_UID_LEN 7
+#define NTAG2XX_BYTES_PER_PAGE 4
+#define NTAG2XX_START_USER_PAGE 4
+#define ISO_CARD_PAYLOAD_HEADER_PAGE NTAG2XX_START_USER_PAGE
+#define ISO_CARD_PAYLOAD_PAGE(num) (ISO_CARD_PAYLOAD_HEADER_PAGE + 1 + (num))
+
 
 #define ISO_CARD_MAX_CARD_READERS 8
 
 typedef struct ISO_CARD {
     uint16_t slotID;
-    char payload[ISO_CARD_MAX_PAYLOAD_LEN];
-    char UUID[ISO_CARD_MAX_UUID_LEN];
+    uint8_t payload[ISO_CARD_MAX_PAYLOAD_LEN];
+    uint8_t UUID[NTAG2XX_VALID_UID_LEN];
     uint8_t UUID_LEN;
     uint8_t payloadLen;
     bool isPopulated;
@@ -50,6 +57,12 @@ ISO_CARD getISOCardBySlotID(uint16_t slotID);
 @returns the ISO card in the slot
 */
 ISO_CARD getISOCardByIndex(int8_t index);
+
+/*
+@param card info that you want written
+@returns operation success (True) or failure (False)
+*/
+bool attemptToWriteToCard(ISO_CARD& cardConfig);
 
 /*
 @param card the Card you want to serialize

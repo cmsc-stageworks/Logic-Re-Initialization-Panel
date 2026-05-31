@@ -46,6 +46,8 @@
 #define MAIN_BOARD_I2C_SDA 3
 #define MAIN_BOARD_I2C_SCL 9
 
+#define MAIN_BOARD_I2C_ONBOARD_BUS (0x01)
+
 
 #define MAIN_BOARD_SPKR 7
 

@@ -16,6 +16,9 @@ SdFat mainBoardSD;
 
 static TCA9535* IO_Expanders[NUM_DIGITAL_IO_EXPANDERS];
 
+static bool returnI2CBusToSet();
+static bool setOnboardI2CBus();
+
 int MainBoardStart(bool initSD){;
     pinMode(MAIN_BOARD_WS2812_PIN, OUTPUT);
     pinMode(MAIN_BOARD_SPKR, OUTPUT);
@@ -47,6 +50,8 @@ int MainBoardStart(bool initSD){;
 
     I2CMuxInit = mainBoardInitI2CMux();
 
+    setOnboardI2CBus();
+
     for(int i = 0; i < NUM_DIGITAL_IO_EXPANDERS; i++){
         IO_Expanders[i] = new TCA9535(MAIN_BOARD_DIGITAL_IO_EXPANDER_BASE_ADDR + i);
         if(IO_Expanders[i]->begin()){
@@ -60,7 +65,22 @@ int MainBoardStart(bool initSD){;
     return 0;
 }
 
+static uint8_t currBus = 0;
+
+static bool setOnboardI2CBus(){
+    Wire.beginTransmission(MAIN_BOARD_I2C_MUX_ADDR);
+    Wire.write(MAIN_BOARD_I2C_ONBOARD_BUS);
+    return !Wire.endTransmission();
+}
+
+static bool returnI2CBusToSet(){
+    Wire.beginTransmission(MAIN_BOARD_I2C_MUX_ADDR);
+    Wire.write(0x01 << currBus);
+    return !Wire.endTransmission();
+}
+
 bool mainBoardSetI2CBus(uint8_t bus){
+    currBus = bus;
     if(bus >= 8 || !I2CMuxInit){
         return false;
     }
@@ -75,31 +95,49 @@ static bool mainBoardInitI2CMux(){
 }
 
 bool mainBoardDigitalPinMode(uint8_t pin, uint8_t mode){
-    return IO_Expanders[pin/16]->pinMode1(pin % 16, mode);
+    setOnboardI2CBus();
+    bool retVal =  IO_Expanders[pin/16]->pinMode1(pin % 16, mode);
+    returnI2CBusToSet();
+    return retVal;
 }
 
 
 bool mainBoard16DigitalPinMode(uint8_t chip, uint16_t mode){
-    return IO_Expanders[chip]->pinMode16(mode);
+    setOnboardI2CBus();
+    bool retVal = IO_Expanders[chip]->pinMode16(mode);
+    returnI2CBusToSet();
+    return retVal;
 }
 
 
 //NOT RECOMMENDED UNLESS YOU ONLY NEED TO READ ONE PIN
 bool mainBoardGetDigitalInput(uint8_t pin){
-    return IO_Expanders[pin/16]->read1(pin % 16);
+    setOnboardI2CBus();
+    bool retVal = IO_Expanders[pin/16]->read1(pin % 16);
+    returnI2CBusToSet();
+    return retVal;
 }
 
 uint16_t mainBoardGet16DigitalInput(uint8_t chip){
-    return IO_Expanders[chip]->read16();
+    setOnboardI2CBus();
+    bool retVal = IO_Expanders[chip]->read16();
+    returnI2CBusToSet();
+    return retVal;
 }
 
 //NOT RECOMMENDED UNLESS YOU ONLY NEED TO WRITE TO ONE PIN
 bool mainBoardWriteDigitalOutput(uint8_t pin, uint8_t val){
-    return IO_Expanders[pin/16]->write1(pin % 16, val);
+    setOnboardI2CBus();
+    bool retVal = IO_Expanders[pin/16]->write1(pin % 16, val);
+    returnI2CBusToSet();
+    return retVal;
 }
 
 bool mainBoardWrite16DigitalOutput(uint8_t chip, uint16_t val){
-    return IO_Expanders[chip]->write16(val);
+    setOnboardI2CBus();
+    bool retVal = IO_Expanders[chip]->write16(val);
+    returnI2CBusToSet();
+    return retVal;
 }
 
 uint32_t mainBoardGetAnalogMux(uint8_t address){

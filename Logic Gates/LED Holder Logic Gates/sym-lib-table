@@ -1,0 +1,6 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "Neopixels")(type "KiCad")(uri "${KIPRJMOD}/Neopixels.kicad_sym")(options "")(descr ""))
+  (lib (name "CMSC_Standard")(type "KiCad")(uri "${KIPRJMOD}/CMSC_Standard.kicad_sym")(options "")(descr ""))
+  (lib (name "CMSC_Logo")(type "KiCad")(uri "C:/Users/swimn/OneDrive/Documents/Space center/CMSC_Logo.kicad_sym")(options "")(descr ""))
+)

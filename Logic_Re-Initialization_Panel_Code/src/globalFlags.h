@@ -1,0 +1,1 @@
+#define DEBUG_NFC_ISO_CARDS true

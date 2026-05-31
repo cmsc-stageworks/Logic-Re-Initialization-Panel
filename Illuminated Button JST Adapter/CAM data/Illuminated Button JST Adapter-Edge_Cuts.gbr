@@ -1,0 +1,23 @@
+%TF.GenerationSoftware,KiCad,Pcbnew,10.0.1*%
+%TF.CreationDate,2026-05-18T16:59:59-06:00*%
+%TF.ProjectId,Illuminated Button JST Adapter,496c6c75-6d69-46e6-9174-656420427574,rev?*%
+%TF.SameCoordinates,Original*%
+%TF.FileFunction,Profile,NP*%
+%FSLAX46Y46*%
+G04 Gerber Fmt 4.6, Leading zero omitted, Abs format (unit mm)*
+G04 Created by KiCad (PCBNEW 10.0.1) date 2026-05-18 16:59:59*
+%MOMM*%
+%LPD*%
+G01*
+G04 APERTURE LIST*
+%TA.AperFunction,Profile*%
+%ADD10C,0.050000*%
+%TD*%
+G04 APERTURE END LIST*
+D10*
+X140250000Y-88750000D02*
+X156950000Y-88750000D01*
+X156950000Y-102250000D01*
+X140250000Y-102250000D01*
+X140250000Y-88750000D01*
+M02*

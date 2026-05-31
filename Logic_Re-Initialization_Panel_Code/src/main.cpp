@@ -1,5 +1,7 @@
-#define DEBUG_NFC_ISO_CARDS true
-
+#include "globalFlags.h"
+// #include "freertos/FreeRTOS.h"
+// #include "freertos/task.h"
+// #include "esp_timer.h"
 #include <Adafruit_NeoPixel.h>
 #include <ESP32Servo.h>
 #include <MainBoard.h>
@@ -14,16 +16,12 @@
 #include <Adafruit_ILI9341.h>
 #include <Adafruit_ImageReader.h>
 #include "logic_evaluator.h"
+#include <Adafruit_Neopixel.h>
+#include "logic_wire_lights.h"
+#include "puzzle_manager.h"
 
-#define LOGIC_GATES_W 4
-#define LOGIC_GATES_H 4
-#define LOGIC_GATES_PORTS_USED 4
-
-#define LCD_ROTATION 3
-#define LCD_H 320
-#define LCD_W 480
-
-const uint8_t portsUsedForGates[LOGIC_GATES_PORTS_USED] = {MAIN_BOARD_ANALOG_PORT_1, MAIN_BOARD_ANALOG_PORT_2, MAIN_BOARD_ANALOG_PORT_3, MAIN_BOARD_ANALOG_PORT_4};
+#define TEST_WRITE_TO_CARD false
+#define TEST_WRITE_TO_CARD_NAME "MISSING-NO"
 
 #define LED_COUNT 20
 
@@ -37,63 +35,18 @@ Adafruit_ST7796S display2(&mainBoardSpi, MAIN_BOARD_LCD_2_CS, MAIN_BOARD_LCD_DC,
 
 EthernetClass ethMain;
 
-uint16_t getLogicColor(wire_state state){
-  switch(state){
-    case NOTHING:
-      return ILI9341_DARKGREY;
-    case FALSE:
-      return ILI9341_RED;
-    case TRUE:
-      return ILI9341_OLIVE;
-    case UNDEFINED:
-      return ILI9341_CYAN;
-    case ERROR:
-      return ILI9341_YELLOW;
-    case UNFILLED_INPUT:
-      return ILI9341_PURPLE;
-    default:
-      return ILI9341_ORANGE;
-  }
-}
+Adafruit_NeoPixel mainStrip = Adafruit_NeoPixel(LOGIC_WIRE_NUM_LEDS, MAIN_BOARD_WS2812_PIN, NEO_RGB+NEO_KHZ800); 
 
-void setupScreenDebug(){
-  display2.fillScreen(ILI9341_BLACK);
-  for(int row = 0; row < 5; row++){
-    display2.drawLine(LCD_W/2 - LCD_H/2, ((LCD_H-1) * row)/4 , LCD_W/2 + LCD_H/2,  ((LCD_H-1) * row)/4, ILI9341_LIGHTGREY);
-  }
-  for(int col = 0; col < 5; col++){
-    display2.drawLine(LCD_W/2 - LCD_H/2 + LCD_H/4 * col, 0, LCD_W/2 - LCD_H/2  + LCD_H/4 * col,  LCD_H, ILI9341_LIGHTGREY);
-  }
-}
+static TimerHandle_t logicGridTimer;
+volatile bool shouldUpdateGrid = false;
 
-void showScreenDebug(LOGIC_CARD* readValues,uint16_t parsed_W,uint16_t parsed_H, logic_grid_wires* logic){
-  for(int row = 0; row < 4; row++){
-    for(int col = 0; col < 4; col++){
-      LOGIC_CARD currCard = readValues[col * 4 + row];
-      bool populated = (currCard & 0x08) != 0;
-      if(populated){
-        Serial.printf("Row: %d Col: %d populated with value: %d\n", row, col, currCard);
-      }
-      display2.drawChar(((LCD_H-1) * (col * 4 + 1))/16 + LCD_W/2 - LCD_H/2, ((LCD_H-1) * (row * 2 + 1))/8, 
-        (populated ? ((currCard & 0x04) != 0) ? '1' : '0' : ' '), ILI9341_WHITE, ILI9341_BLACK, 1);
-      display2.drawChar(((LCD_H-1) * (col * 4 + 2))/16 + LCD_W/2 - LCD_H/2, ((LCD_H-1) * (row * 2 + 1))/8, 
-        (populated ? ((currCard & 0x02) != 0) ? '1' : '0' : ' '), ILI9341_WHITE, ILI9341_BLACK, 1);
-      display2.drawChar(((LCD_H-1) * (col * 4 + 3))/16 + LCD_W/2 - LCD_H/2, ((LCD_H-1) * (row * 2 + 1))/8, 
-        (populated ? ((currCard & 0x01) != 0) ? '1' : '0' : ' '), ILI9341_WHITE, ILI9341_BLACK, 1);
-      int16_t rectX1 = ((LCD_H-1) * (col * 4))/16 + LCD_W/2 - LCD_H/2 + 4;
-      int16_t rectY1 = ((LCD_H-1) * (row * 2 + 1))/8;
-      display2.fillRect(rectX1, rectY1, 10, 10, getLogicColor(logic->wires[col][row]));
-      rectX1 = ((LCD_H-1) * (col * 4 + 4))/16 + LCD_W/2 - LCD_H/2 - 1;
-      display2.fillRect(rectX1, rectY1, -10, 10, getLogicColor(logic->wires[col + 1][row]));
-    }
-  }
-}
+void setLogicGateUpdateFlag(TimerHandle_t handle);
 
 void setup() {
   MainBoardStart(true);
   Serial.println("Logic Re-Initialization Panel");
 
-  setupParseLogicCards(LOGIC_GATES_W, LOGIC_GATES_H, portsUsedForGates ,LOGIC_GATES_PORTS_USED);
+  initPuzzleManager(&mainStrip, 0, &display2);
 
   pinMode(MAIN_BOARD_LCD_1_CS, INPUT_PULLUP);
   pinMode(MAIN_BOARD_LCD_2_CS, INPUT_PULLUP);
@@ -141,9 +94,31 @@ void setup() {
   Serial.printf("Image Print Returned: %d\n", reader.drawBMP("/Pictures/spaceship.bmp", display2, 0, 0, true));
   Serial.printf("Direct image write time: %d\n", millis() - startFill);
   delay(1000);
-  setupScreenDebug();
-  // initISOCards(8);
-  // addISOCard(0x01,)
+
+  logicGridTimer = xTimerCreate("Shot Reload", pdMS_TO_TICKS(500), pdTRUE, NULL, setLogicGateUpdateFlag);
+
+  if(logicGridTimer == NULL){
+    Serial.println("Failed to start Update Grid ISR!");
+  } else{
+    xTimerStart(logicGridTimer, 0);
+  }
+
+  #if TEST_WRITE_TO_CARD
+  ISO_CARD freshCardToWrite;
+  freshCardToWrite.slotID = LOGIC_GATE_SLOT_NUMBER;
+  char* stringName = TEST_WRITE_TO_CARD_NAME;
+  memcpy(freshCardToWrite.payload, stringName, strlen(stringName));
+  freshCardToWrite.payloadLen = strlen(stringName);
+  Serial.print("Payload Len: ");
+  Serial.println(freshCardToWrite.payloadLen);
+
+  while(!attemptToWriteToCard(freshCardToWrite)){
+    Serial.println("Write to card failed, trying again");
+    delay(500);
+  }
+  #endif
+
+  // setPuzzleDemoMode(true);
 
   Serial.print("Initialization Complete @");
   Serial.print(millis());
@@ -152,45 +127,12 @@ void setup() {
 
 
 void loop() {
-  tickParseLogicCards();
-
-  static uint8_t logicTest = 0;
-
-  static uint16_t parsed_W, parsed_H;
-  static LOGIC_CARD* readValues = getParsedGates(&parsed_W, &parsed_H);
-
-  static logic_grid_wires gridWires;
-  static logic_grid grid;
-
-  Serial.println("Current Gate status:");
-  for(int h = 0; h < 4; h++){
-    for(int w = 0; w < 4; w++){
-      Serial.printf("%02x ", readValues[h + w * parsed_W]);
-    }
-    Serial.println();
+  if(shouldUpdateGrid){
+    shouldUpdateGrid = false;
+    tickPuzzleManager();
   }
-
-  gridWires.wires[0][0] = ((logicTest & 0b00010000) != 0) ? TRUE : FALSE;
-  gridWires.wires[0][1] = ((logicTest & 0b00100000) != 0) ? TRUE : FALSE;
-  gridWires.wires[0][2] = ((logicTest & 0b01000000) != 0) ? TRUE : FALSE;
-  gridWires.wires[0][3] = ((logicTest & 0b10000000) != 0) ? TRUE : FALSE;
-
-  readLogicGrid(&grid);
-  populateLogicGridWireState(&grid,&gridWires);
-
-  Serial.println("Grid State:");
-  for(int h = 0; h < 4; h++){
-    for(int w = 0; w < 4; w++){
-      Serial.printf("%02x ", grid.blocks[w][h]);
-      // Serial.print(grid.blocks[h][w],BIN);
-      // Serial.print(' ');
-    }
-    Serial.println();
-  }
-  Serial.println();
-
-  logicTest += 16;
-  delay(500);
-  showScreenDebug(readValues, parsed_W, parsed_H, &gridWires);
 }
 
+void setLogicGateUpdateFlag(TimerHandle_t handle){
+  shouldUpdateGrid = true;
+}

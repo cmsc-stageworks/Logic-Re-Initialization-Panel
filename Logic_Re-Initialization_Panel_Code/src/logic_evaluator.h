@@ -59,13 +59,13 @@ enum wire_state : wire_t {
     UNFILLED_INPUT = 0x20,
 };
 
-struct logic_grid {
+typedef struct logic_grid {
     logic_block_type blocks[LOGIC_BOARD_COLS][LOGIC_BOARD_ROWS];
-};
+} logic_grid;
 
-struct logic_grid_wires {
+typedef struct logic_grid_wires {
     wire_state wires[LOGIC_BOARD_COLS+1][LOGIC_BOARD_ROWS];
-};
+} logic_grid_wires;
 
 void readLogicGrid(logic_grid *output);
 

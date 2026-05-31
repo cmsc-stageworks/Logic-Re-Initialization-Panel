@@ -1,4 +1,5 @@
 #ifndef CARD_PARSER_H
+#define CARD_PARSER_H
 #include <Arduino.h>
 
 // bit 7 denotes if the card is populated or not
