@@ -7,7 +7,7 @@
 
 //max payload length must be divisible by NTAG2XX_BYTES_PER_PAGE with no remainder
 #define ISO_CARD_MAX_PAYLOAD_LEN 32
-#define ISO_CARD_TIMEOUT_LEN_MS 50
+#define ISO_CARD_TIMEOUT_LEN_MS 40
 #define NTAG2XX_VALID_UID_LEN 7
 #define NTAG2XX_BYTES_PER_PAGE 4
 #define NTAG2XX_START_USER_PAGE 4
