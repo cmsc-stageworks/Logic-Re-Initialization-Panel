@@ -1,6 +1,5 @@
 #define _CRT_SECURE_NO_WARNINGS
 
-#include <stdio.h>
 #include <stdint.h>
 #include <stdlib.h>
 #include <assert.h>
@@ -197,4 +196,34 @@ populateLogicGridWireState(logic_grid *gridSetup, logic_grid_wires *gridWireStat
         inputs += slots;
         outputs += slots;
     }
+}
+
+bool8 validate_board(logic_grid *grid, ProblemConfig *conf) {
+    logic_grid_wires wires;
+    
+    for (uint8_t inputs = 0; inputs < 0x10; inputs += 1) {
+        int conf_index = 0;
+        for (int i = 0; i < 4; i++) {
+            wires.wires[0][i] = (inputs & (1 << (3-i))) ? TRUE : FALSE;
+        }
+        
+        populateLogicGridWireState(grid, &wires);
+        for (int i = 0; i < 4; i++) {
+            TruthTableItem expected = conf->truth_table[i][inputs];
+            wire_state actual = wires.wires[LOGIC_BOARD_COLS][i];
+            if (expected == TruthTableItem::DONT_CARE)
+                continue;
+            
+            if (expected == TruthTableItem::TRUE && actual == TRUE) {
+                continue;
+            }
+            else if (expected == TruthTableItem::FALSE && actual == FALSE) {
+                continue;
+            }
+            
+            return false;
+        }
+    }
+    
+    return true;
 }

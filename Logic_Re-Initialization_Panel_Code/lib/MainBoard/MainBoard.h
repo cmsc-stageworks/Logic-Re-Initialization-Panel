@@ -28,9 +28,11 @@ static bool mainBoardInitI2CMux();
 
 bool mainBoardDigitalPinMode(uint8_t pin, uint8_t mode);
 bool mainBoard16DigitalPinMode(uint8_t chip, uint16_t mode);
+bool mainBoardGetDigitalInput(uint8_t pin);
 uint16_t mainBoardGet16DigitalInput(uint8_t chip);
 bool mainBoardWriteDigitalOutput(uint8_t pin, uint8_t val);
 bool mainBoardWrite16DigitalOutput(uint8_t chip, uint16_t val);
+
 uint32_t mainBoardGetAnalogMux(uint8_t address);
 
 #endif

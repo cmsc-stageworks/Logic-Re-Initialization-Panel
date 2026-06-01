@@ -5,6 +5,7 @@
 #include <stdint.h>
 #include <stdlib.h>
 #include <assert.h>
+#include "board_config.h"
 
 #define LOGIC_BOARD_ROWS 4
 #define LOGIC_BOARD_COLS 4
@@ -70,5 +71,7 @@ typedef struct logic_grid_wires {
 void readLogicGrid(logic_grid *output);
 
 void populateLogicGridWireState(logic_grid *gridSetup, logic_grid_wires *gridWireState);
+
+bool8 validate_board(logic_grid *grid, ProblemConfig *conf);
 
 #endif

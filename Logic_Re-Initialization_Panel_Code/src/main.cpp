@@ -124,7 +124,7 @@ void setup() {
   }
   #endif
 
-  // setPuzzleDemoMode(true);
+  setPuzzleDemoMode(true);
 
   Serial.print("Initialization Complete @");
   Serial.print(millis());

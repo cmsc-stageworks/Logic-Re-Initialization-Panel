@@ -24,6 +24,8 @@
 #define PUZZLE_SOLUTION_FILENAME "sol.txt"
 #define PUZZLE_PROMPT_FILENAME "prompt.bmp"
 #define PUZZLE_SUCCESS_FILENAME "success.bmp"
+#define SOLUTION_FILE_BUFFER_SIZE 512
+#define MIN_SOL_FILESIZE 5
 
 #define NUM_ISO_CARDS_LOGIC_PANEL 1
 #define LOGIC_GATE_SLOT_NUMBER 0x8888
@@ -33,10 +35,24 @@
 #define LOGIC_GATES_H 4
 #define LOGIC_GATES_PORTS_USED 4
 
+#define NUM_UI_BTNS 4
+#define NUM_LOGIC_INPUTS 4
+
+#define LOGIC_UI_BTN_BACK 0
+#define LOGIC_UI_BTN_SELECT 1
+#define LOGIC_UI_BTN_LEFT 2
+#define LOGIC_UI_BTN_RIGHT 3
+
 #define LCD_ROTATION 3
 #define LCD_H 320
 #define LCD_W 480
 
+enum PUZZLE_STATES {
+    NOT_IN_PUZZLE,
+    IN_PUZZLE,
+    INCORRECT_SOLUTION,
+    FINISHED_PUZZLE
+};
 
 void initPuzzleManager(Adafruit_NeoPixel* strip, uint16_t offset, Adafruit_ST7796S* screen);
 void setPuzzleDemoMode(bool isSet);
