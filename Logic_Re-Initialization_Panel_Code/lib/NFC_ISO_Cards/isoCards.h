@@ -1,6 +1,7 @@
 #ifndef ISO_CARDS_H
 #define ISO_CARDS_H
 #include <Adafruit_PN532.h>
+#include <Adafruit_Neopixel.h>
 #include <Arduino.h>
 
 #include <String>
@@ -16,9 +17,11 @@
 
 
 #define ISO_CARD_MAX_CARD_READERS 8
+#define ISO_CARDS_NUM_LEDS_PER_CARD 5
 
 typedef struct ISO_CARD {
     uint16_t slotID;
+    int16_t pixelOffset;
     uint8_t payload[ISO_CARD_MAX_PAYLOAD_LEN];
     uint8_t UUID[NTAG2XX_VALID_UID_LEN];
     uint8_t UUID_LEN;
@@ -31,7 +34,7 @@ Initializes the iso-card interface, pre-allocating space needed for interface
 @param numCards the number of cards in the buffer
 @returns 0 if successfull or !0 if an error occured
 */
-int initISOCards(uint8_t numCards);
+int initISOCards(uint8_t numCards, Adafruit_NeoPixel* driver);
 
 /*
 Updates all the card slots.
@@ -44,7 +47,7 @@ Adds an iso card to the buffer
 @param muxNum the I2C bus on the main board we are connected to -1 if not using the mux
 @returns the index of the card, or a negative number if an error was encountered
 */
-int8_t addISOCard(uint16_t slotID, int8_t muxNum = -1);
+int8_t addISOCard(uint16_t slotID, int8_t muxNum = -1, int16_t offset = -1);
 
 /*
 @param slotID the slot that you wish to read (By thorium ID)

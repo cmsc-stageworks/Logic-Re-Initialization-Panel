@@ -27,6 +27,7 @@ static uint32_t getLogicWireColor(wire_state state){
   }
 }
 
+
 void init_wire_lights(uint16_t offset, Adafruit_NeoPixel* strip, bool updateStrip, bool setupStrip) {
     use_strip = strip;
     stripOffset = offset;
@@ -50,6 +51,7 @@ void init_wire_lights(uint16_t offset, Adafruit_NeoPixel* strip, bool updateStri
     }
 }
 
+
 void update_wire_lights(logic_grid_wires* wires) {
   for(int col = 0; col < LOGIC_WIRE_NUM_COLS; col++){
     for(int row = 0; row < LOGIC_WIRE_NUM_ROWS; row++){
@@ -61,10 +63,12 @@ void update_wire_lights(logic_grid_wires* wires) {
   }
 }
 
+
 void wire_lights_correct(){
-  use_strip->fill(use_strip->Color(LOGIC_WIRE_TRUE_COLOR));
+  use_strip->fill(use_strip->Color(LOGIC_WIRE_TRUE_COLOR), stripOffset, LOGIC_WIRE_NUM_COLS * LOGIC_WIRE_NUM_ROWS);
   use_strip->show();
 }
+
 
 void wire_lights_incorrect(){
   bool flash = 0 != ((millis() / INCORRECT_FLASH_DURATION_MS) & 0x1);
@@ -75,6 +79,7 @@ void wire_lights_incorrect(){
   }
   use_strip->show();
 }
+
 
 void wire_lights_inactive(){
   use_strip->fill(use_strip->Color(LOGIC_WIRE_NOTHING_COLOR), stripOffset, LOGIC_WIRE_NUM_COLS * LOGIC_WIRE_NUM_ROWS);

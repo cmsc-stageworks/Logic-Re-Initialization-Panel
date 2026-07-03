@@ -38,6 +38,8 @@
 #define NUM_UI_BTNS 4
 #define NUM_LOGIC_INPUTS 4
 
+#define LOGIC_UI_CHIP_NUM 2
+
 #define LOGIC_UI_BTN_BACK 0
 #define LOGIC_UI_BTN_SELECT 1
 #define LOGIC_UI_BTN_LEFT 2

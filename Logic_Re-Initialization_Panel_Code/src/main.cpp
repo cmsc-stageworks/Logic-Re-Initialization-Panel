@@ -8,6 +8,7 @@
 #include <isoCards.h>
 #include <Adafruit_GFX.h>
 #include <Adafruit_ST7796S.h>
+#include <esp_random.h>
 #include <Wire.h>
 #include <Ethernet3.h>
 #include <SdFat.h>
@@ -19,6 +20,7 @@
 #include <Adafruit_Neopixel.h>
 #include "logic_wire_lights.h"
 #include "puzzle_manager.h"
+#include "InputManager.h"
 
 #define TEST_WRITE_TO_CARD false
 #define TEST_WRITE_TO_CARD_NAME "MISSING-NO"
@@ -44,13 +46,31 @@ EthernetClass ethMain;
 Adafruit_NeoPixel mainStrip = Adafruit_NeoPixel(LOGIC_WIRE_NUM_LEDS, MAIN_BOARD_WS2812_PIN, NEO_RGB+NEO_KHZ800); 
 
 static TimerHandle_t logicGridTimer;
+static TimerHandle_t inputTimer;
+static TimerHandle_t ISOCardTimer;
 volatile bool shouldUpdateGrid = false;
+volatile bool shouldUpdateButtons = false;
+volatile bool shouldCheckInputs = false;
+volatile bool shouldCheckISOCards = false;
+
 
 void setLogicGateUpdateFlag(TimerHandle_t handle);
+void setInputUpdateFlag(TimerHandle_t handle);
+void setISOUpdateFlag(TimerHandle_t handle);
+
+
+void setupGeneralLightStrips();
+
 
 void setup() {
   MainBoardStart(true);
   Serial.println("Logic Re-Initialization Panel");
+
+  initInputs();
+
+  setupGeneralLightStrips();
+
+  initISOCards(NUM_ISO_CARDS_LOGIC_PANEL, &mainStrip);
 
   initPuzzleManager(&mainStrip, 0, &display2);
 
@@ -109,6 +129,22 @@ void setup() {
     xTimerStart(logicGridTimer, 0);
   }
 
+  inputTimer = xTimerCreate("Shot Reload", pdMS_TO_TICKS(10), pdTRUE, NULL, setInputUpdateFlag);
+
+  if(inputTimer == NULL){
+    Serial.println("Failed to start Update Grid ISR!");
+  } else{
+    xTimerStart(inputTimer, 0);
+  }
+
+  ISOCardTimer = xTimerCreate("Shot Reload", pdMS_TO_TICKS(150), pdTRUE, NULL, setISOUpdateFlag);
+
+  if(ISOCardTimer == NULL){
+    Serial.println("Failed to start Update Grid ISR!");
+  } else{
+    xTimerStart(ISOCardTimer, 0);
+  }
+
   #if TEST_WRITE_TO_CARD
   ISO_CARD freshCardToWrite;
   freshCardToWrite.slotID = LOGIC_GATE_SLOT_NUMBER;
@@ -124,7 +160,7 @@ void setup() {
   }
   #endif
 
-  setPuzzleDemoMode(true);
+  // setPuzzleDemoMode(true);
 
   Serial.print("Initialization Complete @");
   Serial.print(millis());
@@ -137,8 +173,44 @@ void loop() {
     shouldUpdateGrid = false;
     tickPuzzleManager();
   }
+  if(shouldCheckInputs){
+    shouldCheckInputs = false;
+    tickInputs();
+  }
+  if(shouldCheckISOCards){
+    shouldCheckISOCards = false;
+    tickParseLogicCards();
+  }
 }
 
 void setLogicGateUpdateFlag(TimerHandle_t handle){
   shouldUpdateGrid = true;
+}
+
+
+void setInputUpdateFlag(TimerHandle_t handle){
+  shouldCheckInputs = true;
+}
+
+
+void setISOUpdateFlag(TimerHandle_t handle){
+  shouldCheckISOCards = true;
+}
+
+
+void setupGeneralLightStrips(){
+  mainStrip.updateLength(LOGIC_WIRE_NUM_LEDS + ISO_CARDS_NUM_LEDS_PER_CARD);
+  mainStrip.begin();
+  mainStrip.setBrightness(LOGIC_WIRE_BRIGHTNESS);
+  mainStrip.fill(mainStrip.Color(255,0,0));
+  mainStrip.show();
+  delay(250);
+  mainStrip.fill(mainStrip.Color(0,255,0));
+  mainStrip.show();
+  delay(250);
+  mainStrip.fill(mainStrip.Color(0,0,255));
+  mainStrip.show();
+  delay(250);
+  mainStrip.clear();
+  mainStrip.show();
 }

@@ -4,20 +4,31 @@
 #include "MainBoard.h"
 #include <Wire.h>
 #include <string.h>
+#include <Adafruit_Neopixel.h>
+#include <esp_random.h>
 
 #define DEBUG_NFC_ISO_CARDS true
 
+
 static Adafruit_PN532* cardReaders;
+static Adafruit_NeoPixel* pixelDriver;
 static uint8_t* cardReadersMuxNums;
 static ISO_CARD* cardsInserted;
 static uint8_t numCardReaders;
 static uint8_t initializedCardReaders; // pointer to what card has not been initialized
 static const char* hexMap = "0123456789ABCDEF";
 
-int initISOCards(uint8_t numCards){
+
+static void cardReadingAnimation(int16_t offset);
+static void cardUnpopulatedAnimation(int16_t offset);
+
+
+int32_t initISOCards(uint8_t numCards, Adafruit_NeoPixel* driver){
     if(numCards > ISO_CARD_MAX_CARD_READERS || numCards == 0){
         return 1;
     }
+
+    pixelDriver = driver;
 
     numCardReaders = numCards;
 
@@ -46,7 +57,7 @@ int initISOCards(uint8_t numCards){
 }
 
 
-int8_t addISOCard(uint16_t slotID, int8_t muxNum){
+int8_t addISOCard(uint16_t slotID, int8_t muxNum, int16_t offset){
     if(initializedCardReaders == numCardReaders){
         return -1;
     }
@@ -63,6 +74,8 @@ int8_t addISOCard(uint16_t slotID, int8_t muxNum){
 
     cardsInserted[initializedCardReaders].slotID = slotID;
 
+    cardsInserted[initializedCardReaders].pixelOffset = offset;
+
     uint32_t versiondata = cardReaders[initializedCardReaders].getFirmwareVersion();
     if (! versiondata) {
         return -3;
@@ -77,6 +90,7 @@ int8_t addISOCard(uint16_t slotID, int8_t muxNum){
     initializedCardReaders++;
     return initializedCardReaders - 1;
 }
+
 
 void tickISOCards(){
     uint8_t success;
@@ -137,6 +151,12 @@ void tickISOCards(){
         else if(!success){ // only eject the card once it has not been detected, not if we didn't read its payload
             cardsInserted[index].isPopulated = false;
         }
+
+        if(cardsInserted[index].isPopulated){
+            cardReadingAnimation(cardsInserted[index].pixelOffset);
+        } else {
+            cardUnpopulatedAnimation(cardsInserted[index].pixelOffset);
+        }
     }
 }
 
@@ -156,6 +176,7 @@ ISO_CARD getISOCardBySlotID(uint16_t slotID){
 ISO_CARD getISOCardByIndex(int8_t index){
     return cardsInserted[index];
 }
+
 
 bool attemptToWriteToCard(ISO_CARD& cardConfig){
     bool success = true;
@@ -222,6 +243,7 @@ bool attemptToWriteToCard(ISO_CARD& cardConfig){
     return success;
 }
 
+
 String cardToString(ISO_CARD card, bool includeSlotID){
     String payload = "";
     for(int i = 0; i < card.payloadLen; i++){
@@ -234,4 +256,27 @@ String cardToString(ISO_CARD card, bool includeSlotID){
     String strVal = "{" + (includeSlotID ? "\"slotID\":" + String(card.slotID) + "," : "") +
                     "\"payload\":\"" + payload + "\",\"UUID\":\"" + UUID + "\"}";
     return strVal;
+}
+
+
+#define ISO_CARD_RED_TO_GREEN(intensity) pixelDriver->Color(intensity, (255 - intensity), 0)
+
+
+static void cardReadingAnimation(int16_t offset) {
+    static int32_t randVal = random(0, ISO_CARDS_NUM_LEDS_PER_CARD * 255);
+    randVal += random(-255, 255);
+    if(randVal > ISO_CARDS_NUM_LEDS_PER_CARD * 255){
+        randVal = ISO_CARDS_NUM_LEDS_PER_CARD * 255;
+    } else if(randVal < 0){
+        randVal = 0;
+    }
+    for(int8_t i = 0; i < ISO_CARDS_NUM_LEDS_PER_CARD; i++){
+        int16_t intensity = randVal > 255 * (1 + i) ? 255 : (randVal <  255 * i ? 0 : randVal - 255 * i);
+        pixelDriver->setPixelColor(offset + i, ISO_CARD_RED_TO_GREEN(intensity));
+    }
+}
+
+
+static void cardUnpopulatedAnimation(int16_t offset) {
+    pixelDriver->fill(0, offset, ISO_CARDS_NUM_LEDS_PER_CARD);
 }

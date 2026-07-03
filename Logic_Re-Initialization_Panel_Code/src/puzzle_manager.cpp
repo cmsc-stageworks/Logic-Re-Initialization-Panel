@@ -1,10 +1,11 @@
 #include "puzzle_manager.h"
+#include "InputManager.h"
 
 static const uint8_t inputMuxPinsLogic[NUM_LOGIC_INPUTS] = {73, 72, 70, 71};
 
 
-static const uint8_t inputUIButtonInputs[NUM_UI_BTNS] = {16,18,20,22};
-static const uint8_t inputUIButtonIndicators[NUM_UI_BTNS] = {17,19,21,23};
+static const uint8_t inputUIButtonInputs[NUM_UI_BTNS] = {33,35,37,39};
+static const uint8_t inputUIButtonIndicators[NUM_UI_BTNS] = {32,34,36,38};
 
 // Private Variables
 static const uint8_t portsUsedForGates[LOGIC_GATES_PORTS_USED] = {MAIN_BOARD_ANALOG_PORT_1, 
@@ -26,13 +27,17 @@ static ProblemConfig currProblemConfig;
 static logic_grid_wires gridWires;
 static logic_grid grid;
 
+static TimerHandle_t errorResetTimer;
+
 static bool isDemoMode = false;
+static bool shouldExitErrorMode = false;
 
 // Static function prototypes
 static void setupScreenDebug();
 static void showScreenDebug(LOGIC_CARD* readValues,uint16_t parsed_W,uint16_t parsed_H, logic_grid_wires* logic);
 static uint16_t getLogicColor(wire_state state);
 static bool loadNewPuzzle(char* puzzleName);
+static void resetErrorTimerExpire(TimerHandle_t handle);
 
 // function definitions
 void initPuzzleManager(Adafruit_NeoPixel* strip, uint16_t offset, Adafruit_ST7796S* screen){
@@ -51,16 +56,15 @@ void initPuzzleManager(Adafruit_NeoPixel* strip, uint16_t offset, Adafruit_ST779
     for(uint8_t uiBtn = 0; uiBtn < NUM_UI_BTNS; uiBtn++){
       mainBoardWriteDigitalOutput(inputUIButtonIndicators[uiBtn], LOW);
     }
-    // delay(100);
-    // for(uint8_t uiBtn = 0; uiBtn < NUM_UI_BTNS; uiBtn++){
-    //   mainBoardWriteDigitalOutput(inputUIButtonIndicators[uiBtn], HIGH);
-    // }
+    delay(100);
+    for(uint8_t uiBtn = 0; uiBtn < NUM_UI_BTNS; uiBtn++){
+      mainBoardDigitalPinMode(inputUIButtonIndicators[uiBtn], INPUT);
+    }
 
-    initISOCards(NUM_ISO_CARDS_LOGIC_PANEL);
     #if DEBUG_PUZZLE_MANAGER
     Serial.println("Started ISO card backend");
     #endif
-    int8_t isoCardInit = addISOCard(LOGIC_GATE_SLOT_NUMBER, LOGIC_GATE_MUX_NUMBER);
+    int8_t isoCardInit = addISOCard(LOGIC_GATE_SLOT_NUMBER, LOGIC_GATE_MUX_NUMBER, LOGIC_WIRE_NUM_LEDS);
     #if DEBUG_PUZZLE_MANAGER
     Serial.print("Started ISO card with code ");
     Serial.println(isoCardInit);
@@ -69,7 +73,17 @@ void initPuzzleManager(Adafruit_NeoPixel* strip, uint16_t offset, Adafruit_ST779
     setupParseLogicCards(LOGIC_GATES_W, LOGIC_GATES_H, portsUsedForGates ,LOGIC_GATES_PORTS_USED);
     readValues = getParsedGates(&parsed_W, &parsed_H);
 
-    init_wire_lights(0, stripToUse, true, true);
+    init_wire_lights(0, stripToUse, true, false);
+
+    for(uint32_t i = 0; i < 4; i++){
+      addInput(inputUIButtonInputs[i], INPUT_EVENT);
+    }
+
+    errorResetTimer = xTimerCreate("Shot Reload", pdMS_TO_TICKS(3000), pdFALSE, NULL, resetErrorTimerExpire);
+
+    if(errorResetTimer == NULL){
+      Serial.println("Failed to start Update Grid ISR!");
+    }
 
     #if DEBUG_PUZZLE_MANAGER
     Serial.print("Puzzle Started");
@@ -85,7 +99,6 @@ void setPuzzleDemoMode(bool isSet){
 
 void tickPuzzleManager(){
     // Parse Logic Cards
-    tickParseLogicCards();
     #if DEBUG_SHOW_GATE_STATUS
     Serial.println("Current Gate status:");
     for(int h = 0; h < 4; h++){
@@ -154,23 +167,36 @@ void tickPuzzleManager(){
     readLogicGrid(&grid);
     populateLogicGridWireState(&grid,&gridWires);
 
-    if(currPuzzleStatus == IN_PUZZLE && mainBoardGetDigitalInput(LOGIC_UI_BTN_SELECT) == 0){
+    // Serial.println();
+
+    if(currPuzzleStatus == IN_PUZZLE && getInputState(inputUIButtonInputs[0])){
+      mainBoardDigitalPinMode(inputUIButtonIndicators[0], OUTPUT);
+      mainBoardWriteDigitalOutput(inputUIButtonIndicators[0], LOW);
+      resetInputState(inputUIButtonInputs[0]);
       if(validate_board(&grid, &currProblemConfig)){
         Serial.println("Solution was correct!");
         currPuzzleStatus = FINISHED_PUZZLE;
       } else {
         Serial.println("Solution was incorrect!");
         currPuzzleStatus = INCORRECT_SOLUTION;
+        xTimerStart(errorResetTimer, 0);
       }
     }
 
     // Update user output
     if(currPuzzleStatus == IN_PUZZLE || isDemoMode){
       update_wire_lights(&gridWires);
+      mainBoardDigitalPinMode(inputUIButtonIndicators[0], INPUT);
     } else if (currPuzzleStatus == FINISHED_PUZZLE){
       wire_lights_correct();
+      mainBoardDigitalPinMode(inputUIButtonIndicators[0], INPUT);
     } else if(currPuzzleStatus == INCORRECT_SOLUTION){
       wire_lights_incorrect();
+      if(shouldExitErrorMode){
+        mainBoardDigitalPinMode(inputUIButtonIndicators[0], INPUT);
+        currPuzzleStatus = IN_PUZZLE;
+        shouldExitErrorMode = false;
+      }
     } else if (currPuzzleStatus == NOT_IN_PUZZLE){
       wire_lights_inactive();
     }
@@ -331,4 +357,8 @@ static bool loadNewPuzzle(char* puzzleName){
     success = false;
   }
   return success;
+}
+
+static void resetErrorTimerExpire(TimerHandle_t handle){
+  shouldExitErrorMode = true;
 }
