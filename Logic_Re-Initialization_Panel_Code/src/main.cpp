@@ -81,45 +81,18 @@ void setup() {
   analogWrite(MAIN_BOARD_LCD_RESET, 0);
   delay(10);
   analogWrite(MAIN_BOARD_LCD_RESET, 0xFF);
-  display1.init(LCD_H, LCD_W, 0, 0, ST7796S_BGR);
-  display1.invertDisplay(true);
-  display1.fillScreen(display1.color565(255,0,0));
-  display1.setRotation(LCD_ROTATION);
   display2.init(LCD_H, LCD_W, 0, 0, ST7796S_BGR);
   display2.invertDisplay(true);
-  display2.fillScreen(display2.color565(255,0,0));
   display2.setRotation(LCD_ROTATION);
-  delay(100);
-  display1.fillScreen(display1.color565(0,255,0));
-  unsigned long startFill = millis();
-  display2.fillScreen(display2.color565(0,255,0));
-  Serial.printf("Screen fill time: %d\n", millis() - startFill);
-  delay(100);
-  display1.fillScreen(display1.color565(0,0,255));
-  display2.fillScreen(display2.color565(0,0,255));
-  delay(100);
-  display1.fillScreen(0);
   display2.fillScreen(0);
-  display1.setCursor(0,0);
-  display2.setCursor(0,0);
-  display1.setTextColor(0xFFFF);
-  display2.setTextColor(0xFFFF);
-  display1.print("Screen ONE initialized");
-  display2.print("Screen TWO initialized");
-  delay(500);
-  // GFXcanvas16 canvas(LCD_W, LCD_H);
   Adafruit_Image image;
-  startFill = millis();
   ImageReturnCode readLogoFromFile = reader.loadBMP("/Pictures/spaceship.bmp", image);
-  unsigned long loadTime = millis() - startFill;
   if(readLogoFromFile == IMAGE_SUCCESS){
     image.draw(display2, 0, 0);
+  } else{
+    display2.setTextSize(3);
+    display2.print("Critical Error! Logic Re-Initializer Failed To start!");
   }
-  Serial.printf("Buffer image load time: %d\nBuffer image load + write time: %d\n", loadTime, millis() - startFill);
-  startFill = millis();
-  Serial.printf("Image Print Returned: %d\n", reader.drawBMP(LOGIC_BOARD_LOGO_PATH, display2, 0, 0, true));
-  Serial.printf("Direct image write time: %d\n", millis() - startFill);
-  delay(1000);
 
   logicGridTimer = xTimerCreate("Shot Reload", pdMS_TO_TICKS(500), pdTRUE, NULL, setLogicGateUpdateFlag);
 
