@@ -158,6 +158,7 @@ void tickISOCards(){
             cardUnpopulatedAnimation(cardsInserted[index].pixelOffset);
         }
     }
+    pixelDriver->show();
 }
 
 
